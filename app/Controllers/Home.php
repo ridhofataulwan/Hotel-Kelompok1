@@ -6,6 +6,9 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('welcome_message');
+        $data = [
+            'title' => 'Welcome To Ecoland',
+        ];
+        return view('pages/index',$data);
     }
 }
