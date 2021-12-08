@@ -15,6 +15,7 @@
                 <li class="nav-item"><a href="#restaurant-section" class="nav-link"><span>Restaurant</span></a></li>
                 <li class="nav-item"><a href="#blog-section" class="nav-link"><span>Blog</span></a></li>
                 <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+                <li class="nav-item"><a href="<?= base_url() . '/logout' ?>" class="nav-link"><span>Logout</span></a></li>
             </ul>
         </div>
     </div>
