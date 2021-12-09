@@ -37,7 +37,8 @@ class Auth extends BaseConfig
 	 * @var array
 	 */
 	public $views = [
-		'login'		   => 'Myth\Auth\Views\login',
+		// 'login'		   => 'Myth\Auth\Views\login',
+		'login'		   => '\App\Views\Auth\login',
 		'register'		=> 'Myth\Auth\Views\register',
 		'forgot'		  => 'Myth\Auth\Views\forgot',
 		'reset'		   => 'Myth\Auth\Views\reset',
@@ -64,7 +65,7 @@ class Auth extends BaseConfig
 	 * @var string[]
 	 */
 	public $validFields = [
-		'email',
+		// 'email',
 		'username',
 	];
 
@@ -178,7 +179,7 @@ class Auth extends BaseConfig
 	 *
 	 * @var bool
 	 */
-	public $allowRemembering = false;
+	public $allowRemembering = true;
 
 	/**
 	 * --------------------------------------------------------------------
