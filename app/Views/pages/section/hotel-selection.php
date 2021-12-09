@@ -12,7 +12,7 @@
                 <div class="project">
                     <div class="img">
                         <div class="vr"><span>Sale</span></div>
-                        <a href="hotel.html"><img src="images/hotel-1.jpg" class="img-fluid" alt="Colorlib Template"></a>
+                        <a href="hotel.html"><img src="/images/hotel-1.jpg" class="img-fluid" alt="Colorlib Template"></a>
                     </div>
                     <div class="text">
                         <h4 class="price"><span class="old-price mr-2">$500</span>$400</h4>
@@ -31,7 +31,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="images/hotel-1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                    <a href="/images/hotel-1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
                         <span class="icon-expand"></span>
                     </a>
                 </div>
@@ -39,7 +39,7 @@
             <div class="col-md-6 col-lg-4 ftco-animate">
                 <div class="project">
                     <div class="img">
-                        <a href="hotel.html"><img src="images/hotel-2.jpg" class="img-fluid" alt="Colorlib Template"></a>
+                        <a href="hotel.html"><img src="/images/hotel-2.jpg" class="img-fluid" alt="Colorlib Template"></a>
                     </div>
                     <div class="text">
                         <h4 class="price">$400</h4>
@@ -58,7 +58,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="images/hotel-2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                    <a href="/images/hotel-2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
                         <span class="icon-expand"></span>
                     </a>
                 </div>
@@ -66,7 +66,7 @@
             <div class="col-md-6 col-lg-4 ftco-animate">
                 <div class="project">
                     <div class="img">
-                        <a href="hotel.html"><img src="images/hotel-3.jpg" class="img-fluid" alt="Colorlib Template"></a>
+                        <a href="hotel.html"><img src="/images/hotel-3.jpg" class="img-fluid" alt="Colorlib Template"></a>
                     </div>
                     <div class="text">
                         <h4 class="price">$400</h4>
@@ -85,7 +85,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="images/hotel-3.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                    <a href="/images/hotel-3.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
                         <span class="icon-expand"></span>
                     </a>
                 </div>
@@ -102,7 +102,7 @@
             <div class="col-md-12 room-wrap">
                 <div class="row">
                     <div class="col-md-7 d-flex ftco-animate">
-                        <div class="img align-self-stretch" style="background-image: url(images/room-1.jpg);"></div>
+                        <div class="img align-self-stretch" style="background-image: url(/images/room-1.jpg);"></div>
                     </div>
                     <div class="col-md-5 ftco-animate">
                         <div class="text py-5">
@@ -118,7 +118,7 @@
                 <div class="row">
                     <div class="col-md-3 ftco-animate">
                         <a href="#" class="d-flex thumb">
-                            <div class="img align-self-stretch" style="background-image: url(images/room-1.jpg);"></div>
+                            <div class="img align-self-stretch" style="background-image: url(/images/room-1.jpg);"></div>
                             <div class="text pl-3 py-3">
                                 <h3>Classic Balcony Room</h3>
                             </div>
@@ -126,7 +126,7 @@
                     </div>
                     <div class="col-md-3 ftco-animate">
                         <a href="#" class="d-flex thumb">
-                            <div class="img align-self-stretch" style="background-image: url(images/room-2.jpg);"></div>
+                            <div class="img align-self-stretch" style="background-image: url(/images/room-2.jpg);"></div>
                             <div class="text pl-3 py-3">
                                 <h3>Classic Balcony Room</h3>
                             </div>
@@ -134,7 +134,7 @@
                     </div>
                     <div class="col-md-3 ftco-animate">
                         <a href="#" class="d-flex thumb">
-                            <div class="img align-self-stretch" style="background-image: url(images/room-3.jpg);"></div>
+                            <div class="img align-self-stretch" style="background-image: url(/images/room-3.jpg);"></div>
                             <div class="text pl-3 py-3">
                                 <h3>Classic Balcony Room</h3>
                             </div>
@@ -142,7 +142,7 @@
                     </div>
                     <div class="col-md-3 ftco-animate">
                         <a href="#" class="d-flex thumb">
-                            <div class="img align-self-stretch" style="background-image: url(images/room-4.jpg);"></div>
+                            <div class="img align-self-stretch" style="background-image: url(/images/room-4.jpg);"></div>
                             <div class="text pl-3 py-3">
                                 <h3>Classic Balcony Room</h3>
                             </div>

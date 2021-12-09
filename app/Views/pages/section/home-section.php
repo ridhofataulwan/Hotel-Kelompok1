@@ -1,12 +1,12 @@
 <section id="home-section" class="hero">
-    <img src="images/blob-shape-3.svg" class="svg-blob" alt="Colorlib Free Template">
+    <img src="/images/blob-shape-3.svg" class="svg-blob" alt="Colorlib Free Template">
     <div class="home-slider owl-carousel">
         <div class="slider-item">
             <div class="overlay"></div>
             <div class="container-fluid p-0">
                 <div class="row d-md-flex no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
                     <div class="one-third order-md-last">
-                        <div class="img" style="background-image:url(images/bg_1.jpg);">
+                        <div class="img" style="background-image:url(/images/bg_1.jpg);">
                             <div class="overlay"></div>
                         </div>
                         <div class="bg-primary">
@@ -31,7 +31,7 @@
             <div class="container-fluid p-0">
                 <div class="row d-flex no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
                     <div class="one-third order-md-last">
-                        <div class="img" style="background-image:url(images/bg_2.jpg);">
+                        <div class="img" style="background-image:url(/images/bg_2.jpg);">
                             <div class="overlay"></div>
                         </div>
                         <div class="vr"><span class="pl-3 py-4" style="background-image: url(images/bg_2-2.jpg);">Africa</span></div>

@@ -12,9 +12,12 @@ class Admin extends BaseController
     }
     public function index()
     {
+        $data = [
+            'title' => 'Admin Dasboard'
+        ];
         if (in_groups('admin')) {
 
-            return view('Admin/index');
+            return view('Admin/index',$data);
         } else if (in_groups('customer')) {
             return redirect()->to('Admin/');
         }
