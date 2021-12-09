@@ -12,7 +12,7 @@
                 <div class="project">
                     <div class="img">
                         <div class="vr"><span>Sale</span></div>
-                        <a href="destination.html"><img src="images/destination-1.jpg" class="img-fluid" alt="Colorlib Template"></a>
+                        <a href="destination.html"><img src="/images/destination-1.jpg" class="img-fluid" alt="Colorlib Template"></a>
                     </div>
                     <div class="text">
                         <h4 class="price"><span class="old-price mr-2">$500</span>$400</h4>
@@ -31,7 +31,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="images/destination-1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                    <a href="/images/destination-1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
                         <span class="icon-expand"></span>
                     </a>
                 </div>
@@ -39,7 +39,7 @@
             <div class="col-md-6 col-lg-4 ftco-animate">
                 <div class="project">
                     <div class="img">
-                        <a href="destination.html"><img src="images/destination-2.jpg" class="img-fluid" alt="Colorlib Template"></a>
+                        <a href="destination.html"><img src="/images/destination-2.jpg" class="img-fluid" alt="Colorlib Template"></a>
                     </div>
                     <div class="text">
                         <h4 class="price">$400</h4>
@@ -58,7 +58,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="images/destination-2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                    <a href="/images/destination-2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
                         <span class="icon-expand"></span>
                     </a>
                 </div>
@@ -66,7 +66,7 @@
             <div class="col-md-6 col-lg-4 ftco-animate">
                 <div class="project">
                     <div class="img">
-                        <a href="destination.html"><img src="images/destination-3.jpg" class="img-fluid" alt="Colorlib Template"></a>
+                        <a href="destination.html"><img src="/images/destination-3.jpg" class="img-fluid" alt="Colorlib Template"></a>
                     </div>
                     <div class="text">
                         <h4 class="price">$400</h4>
@@ -85,7 +85,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="images/destination-3.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                    <a href="/images/destination-3.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
                         <span class="icon-expand"></span>
                     </a>
                 </div>
@@ -93,7 +93,7 @@
             <div class="col-md-6 col-lg-4 ftco-animate">
                 <div class="project">
                     <div class="img">
-                        <a href="destination.html"><img src="images/destination-4.jpg" class="img-fluid" alt="Colorlib Template"></a>
+                        <a href="destination.html"><img src="/images/destination-4.jpg" class="img-fluid" alt="Colorlib Template"></a>
                     </div>
                     <div class="text">
                         <h4 class="price">$400</h4>
@@ -112,7 +112,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="images/destination-4.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                    <a href="/images/destination-4.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
                         <span class="icon-expand"></span>
                     </a>
                 </div>
@@ -120,7 +120,7 @@
             <div class="col-md-6 col-lg-4 ftco-animate">
                 <div class="project">
                     <div class="img">
-                        <a href="destination.html"><img src="images/destination-5.jpg" class="img-fluid" alt="Colorlib Template"></a>
+                        <a href="destination.html"><img src="/images/destination-5.jpg" class="img-fluid" alt="Colorlib Template"></a>
                     </div>
                     <div class="text">
                         <h4 class="price">$400</h4>
@@ -139,7 +139,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="images/destination-5.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                    <a href="/images/destination-5.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
                         <span class="icon-expand"></span>
                     </a>
                 </div>
@@ -147,7 +147,7 @@
             <div class="col-md-6 col-lg-4 ftco-animate">
                 <div class="project">
                     <div class="img">
-                        <a href="destination.html"><img src="images/destination-6.jpg" class="img-fluid" alt="Colorlib Template"></a>
+                        <a href="destination.html"><img src="/images/destination-6.jpg" class="img-fluid" alt="Colorlib Template"></a>
                     </div>
                     <div class="text">
                         <h4 class="price">$400</h4>
@@ -166,7 +166,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="images/destination-6.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                    <a href="/images/destination-6.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
                         <span class="icon-expand"></span>
                     </a>
                 </div>

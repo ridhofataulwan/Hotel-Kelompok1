@@ -1,4 +1,4 @@
-<section class="ftco-intro img" id="hotel-section" style="background-image: url(images/bg_4.jpg);">
+<section class="ftco-intro img" id="hotel-section" style="background-image: url(/images/bg_4.jpg);">
     <div class="overlay"></div>
     <div class="container">
         <div class="row justify-content-center">

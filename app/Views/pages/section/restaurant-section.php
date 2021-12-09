@@ -11,7 +11,7 @@
             <div class="col-md-6 col-lg-4 ftco-animate">
                 <div class="project">
                     <div class="img">
-                        <img src="images/resto-1.jpg" class="img-fluid" alt="Colorlib Template">
+                        <img src="/images/resto-1.jpg" class="img-fluid" alt="Colorlib Template">
                     </div>
                     <div class="text">
                         <h4 class="price"><span class="mr-2">menu start at</span>$4.00</h4>
@@ -30,7 +30,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="images/resto-1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                    <a href="/images/resto-1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
                         <span class="icon-expand"></span>
                     </a>
                 </div>
@@ -38,7 +38,7 @@
             <div class="col-md-6 col-lg-4 ftco-animate">
                 <div class="project">
                     <div class="img">
-                        <img src="images/resto-2.jpg" class="img-fluid" alt="Colorlib Template">
+                        <img src="/images/resto-2.jpg" class="img-fluid" alt="Colorlib Template">
                     </div>
                     <div class="text">
                         <h4 class="price"><span class="mr-2">menu start at</span>$4.00</h4>
@@ -57,7 +57,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="images/resto-2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                    <a href="/images/resto-2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
                         <span class="icon-expand"></span>
                     </a>
                 </div>
@@ -65,7 +65,7 @@
             <div class="col-md-6 col-lg-4 ftco-animate">
                 <div class="project">
                     <div class="img">
-                        <img src="images/resto-3.jpg" class="img-fluid" alt="Colorlib Template">
+                        <img src="/images/resto-3.jpg" class="img-fluid" alt="Colorlib Template">
                     </div>
                     <div class="text">
                         <h4 class="price"><span class="mr-2">menu start at</span>$4.00</h4>
@@ -84,7 +84,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="images/resto-3.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                    <a href="/images/resto-3.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
                         <span class="icon-expand"></span>
                     </a>
                 </div>

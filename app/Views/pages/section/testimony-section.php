@@ -1,6 +1,6 @@
 <section class="ftco-section testimony-section">
-    <img src="images/blob-shape-2.svg" class="svg-blob" alt="Colorlib Free Template">
-    <img src="images/blob-shape-2.svg" class="svg-blob-2" alt="Colorlib Free Template">
+    <img src="/images/blob-shape-2.svg" class="svg-blob" alt="Colorlib Free Template">
+    <img src="/images/blob-shape-2.svg" class="svg-blob-2" alt="Colorlib Free Template">
     <div class="container">
         <div class="row justify-content-center pb-3">
             <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
@@ -13,7 +13,7 @@
                 <div class="carousel-testimony owl-carousel ftco-owl">
                     <div class="item">
                         <div class="testimony-wrap text-center py-4 pb-5">
-                            <div class="user-img" style="background-image: url(images/person_1.jpg)">
+                            <div class="user-img" style="background-image: url(/images/person_1.jpg)">
                                 <span class="quote d-flex align-items-center justify-content-center">
                                     <i class="icon-quote-left"></i>
                                 </span>
@@ -27,7 +27,7 @@
                     </div>
                     <div class="item">
                         <div class="testimony-wrap text-center py-4 pb-5">
-                            <div class="user-img" style="background-image: url(images/person_2.jpg)">
+                            <div class="user-img" style="background-image: url(/images/person_2.jpg)">
                                 <span class="quote d-flex align-items-center justify-content-center">
                                     <i class="icon-quote-left"></i>
                                 </span>
@@ -41,7 +41,7 @@
                     </div>
                     <div class="item">
                         <div class="testimony-wrap text-center py-4 pb-5">
-                            <div class="user-img" style="background-image: url(images/person_3.jpg)">
+                            <div class="user-img" style="background-image: url(/images/person_3.jpg)">
                                 <span class="quote d-flex align-items-center justify-content-center">
                                     <i class="icon-quote-left"></i>
                                 </span>
@@ -55,7 +55,7 @@
                     </div>
                     <div class="item">
                         <div class="testimony-wrap text-center py-4 pb-5">
-                            <div class="user-img" style="background-image: url(images/person_1.jpg)">
+                            <div class="user-img" style="background-image: url(/images/person_1.jpg)">
                                 <span class="quote d-flex align-items-center justify-content-center">
                                     <i class="icon-quote-left"></i>
                                 </span>
@@ -69,7 +69,7 @@
                     </div>
                     <div class="item">
                         <div class="testimony-wrap text-center py-4 pb-5">
-                            <div class="user-img" style="background-image: url(images/person_3.jpg)">
+                            <div class="user-img" style="background-image: url(/images/person_3.jpg)">
                                 <span class="quote d-flex align-items-center justify-content-center">
                                     <i class="icon-quote-left"></i>
                                 </span>

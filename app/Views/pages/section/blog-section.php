@@ -10,7 +10,7 @@
         <div class="row d-flex">
             <div class="col-md-6 col-lg-4 d-flex ftco-animate">
                 <div class="blog-entry justify-content-end">
-                    <a href="single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
+                    <a href="single.html" class="block-20" style="background-image: url('/images/image_1.jpg');">
                     </a>
                     <div class="text float-right d-block">
                         <div class="d-flex align-items-center pt-2 mb-4 topp">
@@ -36,7 +36,7 @@
             </div>
             <div class="col-md-6 col-lg-4 d-flex ftco-animate">
                 <div class="blog-entry justify-content-end">
-                    <a href="single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
+                    <a href="single.html" class="block-20" style="background-image: url('/images/image_2.jpg');">
                     </a>
                     <div class="text float-right d-block">
                         <div class="d-flex align-items-center pt-2 mb-4 topp">
@@ -62,7 +62,7 @@
             </div>
             <div class="col-md-6 col-lg-4 d-flex ftco-animate">
                 <div class="blog-entry">
-                    <a href="single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
+                    <a href="single.html" class="block-20" style="background-image: url('/images/image_3.jpg');">
                     </a>
                     <div class="text float-right d-block">
                         <div class="d-flex align-items-center pt-2 mb-4 topp">
