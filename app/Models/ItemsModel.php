@@ -9,12 +9,12 @@ class ItemsModel extends Model
     protected $table = 'items';
     protected $primaryKey = 'items_id';
 
-    public function getItems($id = '')
+    public function getItems($items_id = '')
     {
-        if ($id == '') {
-            return $this->db->table('items')->join('items_image', 'items.items_images = items_image.items_image_id')->get()->getResultArray();
+        if ($items_id == '') {
+            return $this->db->table('items')->join('items_image', 'items.items_images = items_image.items_image_id')->get()->getResultArray()[0];
         } else {
-            return $this->db->table('items')->where(['items_id' => $id])->get()->getResultArray();
+            return $this->db->table('items')->where(['items_id' => $items_id])->get()->getResultArray()[0];
         }
     }
 

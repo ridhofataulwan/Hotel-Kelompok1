@@ -9,18 +9,9 @@ class CustomerModel extends Model
     protected $table = 'customer';
     protected $primaryKey = 'customer_id';
 
-    public function getHotel($id = '')
-    {
-        if ($id == '') {
-            return $this->db->table('hotel')->get()->getResultArray();
-        } else {
-            return $this->db->table('hotel')->where(['hotel_id' => $id])->get()->getResultArray();
-        }
-    }
-
     public function getCustomerByUser($id)
     {
-        return $this->db->table('customer')->where(['user_id' => $id])->get()->getResultArray();
+        return $this->db->table('customer')->where(['user_id' => $id])->get()->getResultArray()[0];
     }
 
     public function createCustomerProfile($user_id)
@@ -34,4 +25,10 @@ class CustomerModel extends Model
         ];
         return $this->db->table('customer')->insert($data);
     }
+
+    public function updateCustomerProfile($customer_id, $data){
+        return $this->db->table('customer')->where(['customer_id' => $customer_id])->update($data);
+    }
+
+
 }

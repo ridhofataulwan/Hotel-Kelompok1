@@ -9,15 +9,15 @@ class Home extends BaseController
     public function __construct()
     {
         helper(['form', 'url', 'auth']);
-        $this->CustomerModel = new CustomerModel();
+        $this->customerModel = new CustomerModel();
     }
     public function index()
     {
         if (in_groups('customer')) {
             //cek apakah user yang login udah dibuatin profile nya
-            if (empty($this->CustomerModel->getCustomerByUser(user_id()[0]))) {
-                //Ini buat bikin profile dari customer klo baru create(isi = default)
-                $this->CustomerModel->createCustomerProfile(user_id());
+            if (empty($this->customerModel->getCustomerByUser(user_id()))) {
+                //Ini buat bikin profile customer klo baru create(isi = default)
+                $this->customerModel->createCustomerProfile(user_id());
             }
 
             $data = [
