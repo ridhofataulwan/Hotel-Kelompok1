@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\ItemsModel;
 
-class Admin extends BaseController
+class ControllerItems extends BaseController
 {
     public function __construct()
     {
@@ -27,13 +27,21 @@ class Admin extends BaseController
             return view('pages/index',$data2);
         }
     }
-    //========= ITEMS CONTROL ============= (Semua masih blm diset biar cuma admin yang bisa)
+
     public function listItems()
     {
         $data = [
-            'items' => $this->itemsModel->getItems()[0],
+            'items' => $this->itemsModel->getItems(),
         ];
         return view('HALAMAN LIST ITEMSNYA', $data);
+    }
+
+    public function oneItem($id_item)
+    {
+        $data = [
+            'item' => $this->itemsModel->getItems($id_item)
+        ];
+        return view('HALAMAN DETAIL ITEM NYA', $data);
     }
 
     public function addItemPage()
