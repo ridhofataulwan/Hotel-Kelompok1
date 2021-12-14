@@ -10,7 +10,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6 col-lg-4">
                 <div class="login-wrap p-0">
-                    <h3 class="mb-4 text-center">Have an account?</h3>
+                    <h3 class="mb-4 text-center text-xl">Have an account?</h3>
                     <?= view('Myth\Auth\Views\_message_block') ?>
 
                     <form action="<?= route_to('login') ?>" method="post">
@@ -46,14 +46,9 @@
                                     </label>
                                 </div>
                             <?php endif; ?>
-
-                            <div class="w-50 text-md-right">
-                                <a href="#" style="color: #fff">Forgot Password</a>
-                            </div>
-                            </div>
                     </form>
                     <?php if ($config->allowRegistration) : ?>
-                        <a href="<?= route_to('register') ?>"><?= lang('Auth.needAnAccount') ?></a>
+                        <a class="ml-12 hover:text-rose-100" href="<?= route_to('register') ?>"><?= lang('Auth.needAnAccount') ?></a>
                     <?php endif; ?>
 
                 </div>

@@ -13,11 +13,18 @@ class Admin extends BaseController
     }
     public function index()
     {
+        $data = [
+            'title' => 'Dashboard',
+        ];
+
+        $data2 = ['title' => 'Homepage'];
         if (in_groups('admin')) {
 
-            return view('Admin/index');
+            return view('Admin/index', $data);
         } else if (in_groups('customer')) {
-            return redirect()->to('Admin/');
+            return view('pages/index',$data2);
+        } else {
+            return view('pages/index',$data2);
         }
     }
     //========= ITEMS CONTROL ============= (Semua masih blm diset biar cuma admin yang bisa)
