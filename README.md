@@ -1,4 +1,4 @@
-// DOKUMENTASI PROJECT
+//DOKUMENTASI PROJECT
 
 //Ex: edit controllerA.php - keterangan tambah function delete
 
@@ -8,7 +8,7 @@
 - itemsModel = (file baru) model items
 - Data dummy belum ada, view blm ada blm bisa dicoba
 
-//Update 1.1 
+//Update 0.0.1 
 
 Nonaktif login filter -> User tidak perlu login dahulu
 Add dropdown menu untuk user pada homepage
