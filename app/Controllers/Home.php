@@ -20,7 +20,7 @@ class Home extends BaseController
                 $this->CustomerModel->createCustomerProfile(user_id());
             }
 
-            $data = [
+            $data = [   
                 'title' => 'Welcome To Ecoland',
             ];
             return view('pages/index', $data);
