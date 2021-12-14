@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\BookingModel;
 use App\Models\CustomerModel;
 
 class ControllerBooking extends BaseController
@@ -13,11 +14,24 @@ class ControllerBooking extends BaseController
         $this->bookingModel = new BookingModel();
     }
 
-    public function createNewBookPage(){
-        //halaman
+    public function listBookAll()
+    {
+        $data = [
+            'book' => $this->bookingModel->getBooking()
+        ];
+        return view('IniViewNya', $data);
     }
 
-    public function createNewBook(){
+    public function listBookCustomer()
+    {
+        $data = [
+            'bookCustomer' => $this->bookingModel->getBookingCustomer($this->customerModel->getCustomerIdByUser(user_id()))
+        ];
+        return view('IniView', $data);
+    }
+
+    public function createNewBook($item_id)
+    {
         $data = [
             'booking_id' => '',
             'booking_duration' => $this->request->getPost('durasi_booking'),
@@ -25,10 +39,10 @@ class ControllerBooking extends BaseController
             'booking_date_start' => $this->request->getPost('mulai_tanggal_booking'),
             'booking_date_stop' => $this->request->getPost('stop_tanggal_booking'),
             'booking_proof_of_payment' => $this->request->getPost('bukti_pembayaran_booking'),
-            'booking_id_items' => 'BELUM KE RESOLVE GIMANA, APAKAH PAKE CHART KERANJANG??',
-            'booking_id_customer' => $this->request->getPost('id_customer_booking'),
+            'booking_id_items' => $item_id,
+            'booking_id_customer' => $this->customerModel->getCustomerIdByUser(user_id()),
             'booking_status' => 'pending'
-        ]
+        ];
 
         $this->bookingModel->createBook($data);
         echo '

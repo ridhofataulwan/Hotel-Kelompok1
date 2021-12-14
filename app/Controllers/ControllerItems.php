@@ -20,7 +20,7 @@ class ControllerItems extends BaseController
             return redirect()->to('Admin/');
         }
     }
-    
+
     public function listItems()
     {
         $data = [
@@ -29,10 +29,11 @@ class ControllerItems extends BaseController
         return view('HALAMAN LIST ITEMSNYA', $data);
     }
 
-    public function oneItem($id_item){
+    public function oneItem($id_item)
+    {
         $data = [
-            'item' => $this->itemsModel->getItems($id_item);
-        ]
+            'item' => $this->itemsModel->getItems($id_item)
+        ];
         return view('HALAMAN DETAIL ITEM NYA', $data);
     }
 

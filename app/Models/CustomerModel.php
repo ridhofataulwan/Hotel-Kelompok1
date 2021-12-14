@@ -14,6 +14,11 @@ class CustomerModel extends Model
         return $this->db->table('customer')->where(['user_id' => $id])->get()->getResultArray()[0];
     }
 
+    public function getCustomerIdByUser($id)
+    {
+        return $this->db->table('customer')->select('customer_id')->where(['user_id' => $id])->get()->getResultArray()[0];
+    }
+
     public function createCustomerProfile($user_id)
     {
         $data = [
@@ -26,9 +31,8 @@ class CustomerModel extends Model
         return $this->db->table('customer')->insert($data);
     }
 
-    public function updateCustomerProfile($customer_id, $data){
+    public function updateCustomerProfile($customer_id, $data)
+    {
         return $this->db->table('customer')->where(['customer_id' => $customer_id])->update($data);
     }
-
-
 }
