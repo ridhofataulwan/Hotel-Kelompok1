@@ -8,14 +8,14 @@ class ItemsModel extends Model
 {
     protected $table = 'items';
     protected $primaryKey = 'items_id';
-
-    public function getItems($items_id = '')
+    protected $allowedFields = ['items_id','items_name','items_type','items_city','items_address','items_price','items_desc','items_facility','items_images' ];
+    public function getItems($items_id = true)
     {
-        if ($items_id == '') {
-            return $this->db->table('items')->join('items_image', 'items.items_images = items_image.items_image_id')->get()->getResultArray()[0];
-        } else {
-            return $this->db->table('items')->where(['items_id' => $items_id])->get()->getResultArray()[0];
-        }
+         if ($items_id == true) {
+             return $this->db->table('items')->join('items_image', 'items.items_images = items_image.items_image_id')->get()->getResultArray();
+         } else {
+             return $this->where(['items_id' => $items_id])->first();
+         }
     }
 
     public function addItem($data)

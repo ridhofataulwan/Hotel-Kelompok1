@@ -24,7 +24,7 @@
                             </button>
                         </li>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item text-rose-300" href="#">Profile</a></li>
+                            <li><a class="dropdown-item text-rose-300" href="<?= base_url();?>/customer">Profile</a></li>
                             <li><a class="dropdown-item text-rose-300" href="#">Settings</a></li>
                             <li><a class="dropdown-item text-rose-300" href="<?= base_url();?>/logout">Logout</a></li>
                         </ul>

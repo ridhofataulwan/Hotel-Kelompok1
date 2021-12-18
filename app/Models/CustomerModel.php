@@ -14,9 +14,13 @@ class CustomerModel extends Model
         return $this->db->table('customer')->where(['user_id' => $id])->get()->getResultArray()[0];
     }
 
-    public function getCustomerIdByUser($id)
+    public function getCustomerIdByUser($id = false)
     {
-        return $this->db->table('customer')->select('customer_id')->where(['user_id' => $id])->get()->getResultArray()[0];
+        if($id == false)
+        {
+            return $this->findAll();
+        }
+        return $this->where(['user_id' => $id])->first();
     }
 
     public function createCustomerProfile($user_id)

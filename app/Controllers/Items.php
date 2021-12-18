@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\ItemsModel;
 
-class ControllerItems extends BaseController
+class Items extends BaseController
 {
     public function __construct()
     {
@@ -32,8 +32,9 @@ class ControllerItems extends BaseController
     {
         $data = [
             'items' => $this->itemsModel->getItems(),
+            'title' => 'Item List'
         ];
-        return view('HALAMAN LIST ITEMSNYA', $data);
+        return view('Admin/items/listItems', $data);
     }
 
     public function oneItem($id_item)
@@ -49,7 +50,7 @@ class ControllerItems extends BaseController
         $data = [
             'itemBaru' => True, //Hmmm, ini buat nambah bedain antara form tambah atau form edit (formnya pake satu view aja)
         ];
-        return view('HALAMAN FORM NYA', $data);
+        return view('Admin/items/addItem', $data);
     }
 
     public function addItem()

@@ -20,9 +20,19 @@
 </head>
 
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+    
+    
     <?= $this->renderSection('content'); ?>
+    
     <!-- REQUIRED SCRIPTS -->
     <!-- jQuery -->
+    <footer class="main-footer">
+        <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+        All rights reserved.
+        <div class="float-right d-none d-sm-inline-block">
+            <b>Version</b> 3.1.0
+        </div>
+    </footer>
     <script src="/admin/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
