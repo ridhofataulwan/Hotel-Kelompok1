@@ -20,6 +20,6 @@ Add dropdown menu untuk user pada homepage
 - App/Config/Routes.php = Set default route Admin::index
 - App/Controllers/Admin.php = Benerin return view buat tiap-tiap user
 ## Update 0.0.2
-Rename beberapa controller 
+Rename beberapa controller dan function
 Nambah view buat profile user
 
