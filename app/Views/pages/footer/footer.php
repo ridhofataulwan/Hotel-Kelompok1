@@ -45,7 +45,7 @@
                         <ul>
                             <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
                             <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-                            <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+                            <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@ecoland.com</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -58,10 +58,25 @@
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     Copyright &copy;<script>
                         document.write(new Date().getFullYear());
-                    </script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                    </script> All rights reserved 
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 </p>
             </div>
         </div>
     </div>
+  <script src="<?= base_url();?>/js/jquery.min.js"></script>
+  <script src="<?= base_url();?>/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="<?= base_url();?>/js/popper.min.js"></script>
+  <script src="<?= base_url();?>/js/bootstrap.min.js"></script>
+  <script src="<?= base_url();?>/js/jquery.easing.1.3.js"></script>
+  <script src="<?= base_url();?>/js/jquery.waypoints.min.js"></script>
+  <script src="<?= base_url();?>/js/jquery.stellar.min.js"></script>
+  <script src="<?= base_url();?>/js/owl.carousel.min.js"></script>
+  <script src="<?= base_url();?>/js/jquery.magnific-popup.min.js"></script>
+  <script src="<?= base_url();?>/js/aos.js"></script>
+  <script src="<?= base_url();?>/js/jquery.animateNumber.min.js"></script>
+  <script src="<?= base_url();?>/js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="<?= base_url();?>/js/google-map.js"></script>
+  <script src="<?= base_url();?>/js/main.js"></script>
 </footer>

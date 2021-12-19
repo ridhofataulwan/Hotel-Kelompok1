@@ -23,3 +23,12 @@ Add dropdown menu untuk user pada homepage
 Rename beberapa controller dan function
 Nambah view buat profile user
 
+## Update 0.0.3
+Booking view done (Baru frontend belum di konek ke model)
+Remove beberapa menu navbar
+Remake view user profile
+### File Added:
+- View/Pages/Book/rooms.php = List room yang bisa dipesan
+- View/Pages/Book/details.php = Untuk konfirmasi pemesanan
+
+
