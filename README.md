@@ -26,3 +26,14 @@ Rename beberapa controller dan function
 Nambah view buat profile user
 
 ## Update 0.0.3
+- Bagian Profile sudah fix (error sudah diperbaiki)
+- Bagian List Items sudah fix (join dihilangkan, sedikit perubahan pada ItemsModel untuk penyesuaian)
+- Nambah dummy satu biji di bagian items dan items list (dummy juga di tabel customer buat tes method update profile) Harap update DB di lokal klean pake DB yang baru. (Folder Backup DB berisi database yang belum berisi dummy)
+=======
+Booking view done (Baru frontend belum di konek ke model)
+Remove beberapa menu navbar
+Remake view user profile
+
+### File Added:
+- View/Pages/Book/rooms.php = List room yang bisa dipesan
+- View/Pages/Book/details.php = Untuk konfirmasi pemesanan
