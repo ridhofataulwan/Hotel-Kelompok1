@@ -29,4 +29,4 @@ Nambah view buat profile user
 
 - Bagian Profile sudah fix (error sudah diperbaiki)
 - Bagian List Items sudah fix (join dihilangkan, sedikit perubahan pada ItemsModel untuk penyesuaian)
-- Nambah dummy satu biji di bagian items dan items list (dummy juga di tabel customer buat tes method update profile) Harap update DB di lokal klean pake DB yang baru. (Backup DB yang belum ada dummy nya)
+- Nambah dummy satu biji di bagian items dan items list (dummy juga di tabel customer buat tes method update profile) Harap update DB di lokal klean pake DB yang baru. (Folder Backup DB berisi database yang belum berisi dummy)
