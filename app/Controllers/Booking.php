@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\BookingModel;
 use App\Models\CustomerModel;
 
-class ControllerBooking extends BaseController
+class Booking extends BaseController
 {
     public function __construct()
     {
@@ -16,18 +16,18 @@ class ControllerBooking extends BaseController
 
     public function index()
     {
-        $data = [
-            'book' => $this->bookingModel->getBooking()
-        ];
-        return view('IniViewNya', $data);
+        // $data = [
+        //     'book' => $this->bookingModel->getBooking()
+        // ];
+        return view('pages/book/rooms');
     }
 
     public function listBook()
     {
-        $data = [
-            'bookCustomer' => $this->bookingModel->getBookingCustomer($this->customerModel->getCustomerIdByUser(user_id()))
-        ];
-        return view('IniView', $data);
+        // $data = [
+        //     'bookCustomer' => $this->bookingModel->getBookingCustomer($this->customerModel->getCustomerIdByUser(user_id()))
+        // ];
+        return view('pages/book/details');
     }
 
     public function create($item_id)
