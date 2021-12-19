@@ -8629,9 +8629,8 @@ h1, h2, h3, h4, h5,
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09);
-  -moz-box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09);
-  box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09); }
+  
+   }
   .btn:hover, .btn:active, .btn:focus {
     outline: none; }
   .btn.btn-primary {

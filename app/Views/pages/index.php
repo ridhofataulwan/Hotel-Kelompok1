@@ -11,14 +11,8 @@
     <!-- Home Section -->
     <?= $this->include('pages/section/home-section'); ?>
 
-    <!-- Travel Section -->
-    <?= $this->include('pages/section/travel-section'); ?>
-
     <!-- Service Section -->
     <?= $this->include('pages/section/services-section'); ?>
-
-    <!-- About Section -->
-    <?= $this->include('pages/section/about-section'); ?>
 
     <!-- Destination Section -->
     <?= $this->include('pages/section/destination-section'); ?>
@@ -29,8 +23,6 @@
     <!-- Hotel Section -->
     <?= $this->include('pages/section/hotel-section');?>
     
-    <!-- Hotel Choice Section -->
-    <?= $this->include('pages/section/hotel-selection');?>
     
     <!-- Testimony Section -->
     <?= $this->include('pages/section/testimony-section');?>
@@ -38,9 +30,7 @@
     <!-- Restaurant Section -->
     <?= $this->include('pages/section/restaurant-section');?>
     
-    <!-- Blog Section -->
-    <?= $this->include('pages/section/blog-section');?>
-    
+   
     <!-- Contact Section -->
     <?= $this->include('pages/section/contact-section');?>
 
