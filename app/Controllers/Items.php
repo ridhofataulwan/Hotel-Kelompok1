@@ -19,12 +19,11 @@ class Items extends BaseController
 
         $data2 = ['title' => 'Homepage'];
         if (in_groups('admin')) {
-
             return view('Admin/index', $data);
         } else if (in_groups('customer')) {
-            return view('pages/index',$data2);
+            return view('pages/index', $data2);
         } else {
-            return view('pages/index',$data2);
+            return view('pages/index', $data2);
         }
     }
 
