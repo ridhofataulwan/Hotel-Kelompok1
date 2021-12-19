@@ -83,14 +83,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                   <?= dd($items); ?>
+                    <?php $num = 0; ?>
                     <?php foreach ($items as $i) : ?>
-                    <tr>
-                        <th scope="row"><?= $i++ ?></th>
-                        <td><?= $i['items_name'] ?></td>
-                        <td><?= $i['items_type'] ?></td>
-                        <td>-</td>
-                    </tr>
+                        <tr>
+                            <th scope="row"><?= $num++ ?></th>
+                            <td><?= $i['items_name'] ?></td>
+                            <td><?= $i['items_type'] ?></td>
+                            <td>-</td>
+                        </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
@@ -101,12 +101,12 @@
                         <!-- /.info-box -->
                     </div>
 
-                    
-                        <!-- /.col -->
-                    </div>
-                    <!-- /.row -->
+
+                    <!-- /.col -->
                 </div>
-                <!--/. container-fluid -->
+                <!-- /.row -->
+            </div>
+            <!--/. container-fluid -->
         </section>
         <!-- /.content -->
     </div>

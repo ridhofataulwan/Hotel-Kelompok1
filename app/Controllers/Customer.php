@@ -20,10 +20,10 @@ class Customer extends BaseController
         return view('User/profile', $data);
     }
 
-    public function update($id)
+    public function update($id_customer)
     {
         $data = [
-            'customer' => $this->customerModel->getCustomerIdByUser($id)
+            'customer' => $this->customerModel->getCustomerById($id_customer)
         ];
         return view('User/editProfile', $data);
     }
@@ -34,9 +34,9 @@ class Customer extends BaseController
         //Kalo ga, yang di view name dari inputnya yang ngikutin yang disini
 
         //Mungkin cek error input nambah datanya dibuat di html e aja kali ya, biar ga ribet
-        
+
         $data = [
-            
+
             'customer_name' => $this->request->getVar('nama_customer'),
             'customer_telp' => $this->request->getVar('telp_customer'),
             'customer_address' => $this->request->getVar('alamat_customer'),

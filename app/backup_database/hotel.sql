@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2021 at 10:34 AM
+-- Generation Time: Dec 08, 2021 at 03:15 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -140,14 +140,7 @@ INSERT INTO `auth_logins` (`id`, `ip_address`, `email`, `user_id`, `date`, `succ
 (3, '::1', 'pelanggan2@gmail.com', 4, '2021-12-08 08:03:05', 1),
 (4, '::1', 'nrizky', NULL, '2021-12-08 08:11:35', 0),
 (5, '::1', 'its.nrizky@student.uns.ac.id', 1, '2021-12-08 08:11:47', 1),
-(6, '::1', 'admin@admin.com', 3, '2021-12-08 08:12:32', 1),
-(7, '::1', 'its.nrizky@student.uns.ac.id', 1, '2021-12-09 02:03:48', 1),
-(8, '::1', 'admin@admin.com', 3, '2021-12-09 02:05:07', 1),
-(9, '::1', 'nrizky', NULL, '2021-12-09 02:08:20', 0),
-(10, '::1', 'its.nrizky@student.uns.ac.id', 1, '2021-12-09 02:08:34', 1),
-(11, '::1', 'admin@admin.com', 3, '2021-12-19 02:34:27', 1),
-(12, '::1', 'pelanggan2@gmail.com', 4, '2021-12-19 02:39:32', 1),
-(13, '::1', 'admin@admin.com', 3, '2021-12-19 03:07:05', 1);
+(6, '::1', 'admin@admin.com', 3, '2021-12-08 08:12:32', 1);
 
 -- --------------------------------------------------------
 
@@ -261,7 +254,7 @@ CREATE TABLE `customer` (
 
 INSERT INTO `customer` (`customer_id`, `customer_name`, `customer_telp`, `customer_address`, `user_id`) VALUES
 (1, 'Masukkan nama anda', 'Masukkan no hp', 'Masukkan alamat anda', 1),
-(2, 'Ini Nama Pelanggan Dua', '081222222222', 'Rumah Pelanggan Dua', 4);
+(2, 'Masukkan nama anda', 'Masukkan no hp', 'Masukkan alamat anda', 4);
 
 -- --------------------------------------------------------
 
@@ -277,15 +270,9 @@ CREATE TABLE `items` (
   `items_address` text NOT NULL,
   `items_price` int(255) NOT NULL,
   `items_desc` text NOT NULL,
-  `items_facility` text NOT NULL
+  `items_facility` text NOT NULL,
+  `items_images` int(3) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `items`
---
-
-INSERT INTO `items` (`items_id`, `items_name`, `items_type`, `items_city`, `items_address`, `items_price`, `items_desc`, `items_facility`) VALUES
-(1, 'Hotel Satu', 'hotel', 'Surakarta', 'JL. Surakarta no 1', 2000000, 'Ini deskripsi hotel', 'ini isi dari hotelnya');
 
 -- --------------------------------------------------------
 
@@ -298,14 +285,6 @@ CREATE TABLE `items_image` (
   `items_id` int(3) DEFAULT NULL,
   `items_image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `items_image`
---
-
-INSERT INTO `items_image` (`items_image_id`, `items_id`, `items_image`) VALUES
-(1, 1, 'Ini gambar Hotel Satu'),
-(2, 1, 'Ini Gambar Hotel Satu Kedua');
 
 -- --------------------------------------------------------
 
@@ -463,7 +442,8 @@ ALTER TABLE `customer`
 -- Indexes for table `items`
 --
 ALTER TABLE `items`
-  ADD PRIMARY KEY (`items_id`);
+  ADD PRIMARY KEY (`items_id`),
+  ADD KEY `Items Images` (`items_images`);
 
 --
 -- Indexes for table `items_image`
@@ -512,7 +492,7 @@ ALTER TABLE `auth_groups`
 -- AUTO_INCREMENT for table `auth_logins`
 --
 ALTER TABLE `auth_logins`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `auth_permissions`
@@ -530,7 +510,7 @@ ALTER TABLE `auth_reset_attempts`
 -- AUTO_INCREMENT for table `auth_tokens`
 --
 ALTER TABLE `auth_tokens`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `booking`
@@ -554,13 +534,13 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `items_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `items_id` int(3) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `items_image`
 --
 ALTER TABLE `items_image`
-  MODIFY `items_image_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `items_image_id` int(3) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -630,6 +610,12 @@ ALTER TABLE `confirmation`
 --
 ALTER TABLE `customer`
   ADD CONSTRAINT `User Customer` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Constraints for table `items`
+--
+ALTER TABLE `items`
+  ADD CONSTRAINT `Items Images` FOREIGN KEY (`items_images`) REFERENCES `items_image` (`items_image_id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
 -- Constraints for table `items_image`

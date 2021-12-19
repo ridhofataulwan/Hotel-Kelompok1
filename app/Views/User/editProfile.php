@@ -77,7 +77,7 @@
                         <div class="image overflow-hidden">
                             <img class="h-auto w-full mx-auto rounded-xl" src="https://lavinephotography.com.au/wp-content/uploads/2017/01/PROFILE-Photography-112.jpg" alt="">
                         </div>
-                        <h1 class="text-gray-900 font-bold text-xl leading-8 my-1"><?= isset($customer['customer_name']);  ?></h1>
+                        <h1 class="text-gray-900 font-bold text-xl leading-8 my-1"><?= $customer['customer_name'];  ?></h1>
                         <ul class="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm">
                             <li class="flex items-center py-3">
                                 <span>Status</span>
@@ -106,21 +106,21 @@
                             </span>
                             <span class="tracking-wide">About</span>
                         </div>
-                        <form action="<?= base_url(); ?>/customer/updateCustomer/<?= $customer['id']; ?>">
+                        <form action="<?= base_url(); ?>/customer/updateCustomer/<?= $customer['customer_id']; ?>">
                             <div class="text-gray-700">
                                 <div class="grid md:grid-cols-2 text-sm">
                                     <div class="grid grid-cols-2">
                                         <div class="px-4 py-2 font-semibold">Full Name</div>
-                                        <div class="px-4 py-2"><input type="text" name="nama_customer" class=" rounded w-full focus:outline-none focus:shadow-outline" autofocus value=<?= isset( $customer['customer_name']); ?>></div>
+                                        <div class="px-4 py-2"><input type="text" name="nama_customer" class=" rounded w-full focus:outline-none focus:shadow-outline" autofocus value="<?= $customer['customer_name']; ?>"></div>
                                     </div>
 
                                     <div class="grid grid-cols-2">
                                         <div class="px-4 py-2 font-semibold">Contact No.</div>
-                                        <div class="px-4 py-2"><input type="text" name="telp_customer" class=" rounded w-full focus:outline-none focus:shadow-outline" value=<?= isset($customer['customer_telp']); ?>> </div>
+                                        <div class="px-4 py-2"><input type="text" name="telp_customer" class=" rounded w-full focus:outline-none focus:shadow-outline" value="<?= $customer['customer_telp']; ?>"> </div>
                                     </div>
                                     <div class="grid grid-cols-2">
                                         <div class="px-4 py-2 font-semibold">Current Address</div>
-                                        <div class="px-4 py-2"><input type="text" name="alamat_customer" class=" rounded w-full focus:outline-none focus:shadow-outline" value=<?= isset($customer['customer_address']); ?>></div>
+                                        <div class="px-4 py-2"><input type="text" name="alamat_customer" class=" rounded w-full focus:outline-none focus:shadow-outline" value="<?= $customer['customer_address']; ?>"></div>
                                     </div>
 
                                     <div class="grid grid-cols-2">
