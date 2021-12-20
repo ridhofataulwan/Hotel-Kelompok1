@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
-   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="/book/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="/book/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="/book/css/elegant-icons.css" type="text/css">
@@ -57,7 +57,7 @@
     <!-- Breadcrumb Section End -->
 
     <!-- Room Details Section Begin -->
-    <section class="room-details-section spad">
+    <section class="animate__animated animate__fadeIn room-details-section spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
@@ -197,6 +197,8 @@
                             <div class="select-option">
                                 <label for="guest">Guests:</label>
                                 <select id="guest">
+                                    <option value="">1 Adults</option>
+                                    <option value="">2 Adults</option>
                                     <option value="">3 Adults</option>
                                 </select>
                             </div>
@@ -204,6 +206,7 @@
                                 <label for="room">Room:</label>
                                 <select id="room">
                                     <option value="">1 Room</option>
+                                    <option value="">2 Room</option>
                                 </select>
                             </div>
                             <button type="submit">Book Now</button>

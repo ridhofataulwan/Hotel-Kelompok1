@@ -15,7 +15,7 @@
 
     <!-- Css Styles -->
    
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="/book/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="/book/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="/book/css/elegant-icons.css" type="text/css">
@@ -41,7 +41,7 @@
     <!-- Header End -->
 
     <!-- Breadcrumb Section Begin -->
-    <div class="breadcrumb-section mt-2">
+    <div class="animate__animated animate__fadeInUpBig breadcrumb-section mt-2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -59,7 +59,7 @@
     <!-- Breadcrumb Section End -->
 
     <!-- Rooms Section Begin -->
-    <section class="rooms-section spad">
+    <section class="animate__animated animate__fadeInUpBig rooms-section spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6">

@@ -24,7 +24,7 @@
                     <li class="nav-item"><a href="/booking" class="nav-link"><span>Book</span></a></li>
                     <div class="dropdown">
                         <li class="nav-item">
-                            <button class="btn dropdown-toggle mt-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn dropdown-toggle mt-1 py-2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span class="font-semibold ">
                                     <?= user()->username; ?>
                                 </span>
