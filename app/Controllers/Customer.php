@@ -10,6 +10,8 @@ class Customer extends BaseController
     {
         helper(['form', 'url', 'auth']);
         $this->customerModel = new CustomerModel();
+        // $this->builder = $this->db->table('users');
+
     }
 
     public function index()
@@ -25,6 +27,8 @@ class Customer extends BaseController
         $data = [
             'customer' => $this->customerModel->getCustomerById($id_customer)
         ];
+        // $query = $this->builder->get();
+        // $data['users'] = $query->getResult();
         return view('User/editProfile', $data);
     }
 
@@ -43,11 +47,7 @@ class Customer extends BaseController
         ];
 
         $this->customerModel->updateCustomerProfile($id_customer, $data);
-        echo '
-                <script>
-                    alert("Profil Anda Berhasil Dirubah");
-                    window.location="' . base_url('Home/') . '";
-                </script>
-            ';
+        session()->setFlashData('pesan', 'Data has been saved successfully!');
+        return redirect()->to('customer');
     }
 }

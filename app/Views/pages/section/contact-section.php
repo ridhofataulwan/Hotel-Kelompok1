@@ -61,7 +61,7 @@
                             </div>
                             <div>
                                 <h3 class="mb-3">Email Address</h3>
-                                <p><a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                                <p><a href="mailto:info@yoursite.com">info@ecoland.com</a></p>
                             </div>
                         </div>
                     </div>
@@ -72,7 +72,7 @@
                             </div>
                             <div>
                                 <h3 class="mb-3">Website</h3>
-                                <p><a href="#">yoursite.com</a></p>
+                                <p><a href="#">ecoland.com</a></p>
                             </div>
                         </div>
                     </div>

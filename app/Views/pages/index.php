@@ -19,32 +19,32 @@
 
     <!-- Destination Choice Section -->
     <?= $this->include('pages/section/destination-choice'); ?>
-    
+
     <!-- Hotel Section -->
-    <?= $this->include('pages/section/hotel-section');?>
-    
-    
+    <?= $this->include('pages/section/hotel-section'); ?>
+
+
     <!-- Testimony Section -->
-    <?= $this->include('pages/section/testimony-section');?>
-    
+    <?= $this->include('pages/section/testimony-section'); ?>
+
     <!-- Restaurant Section -->
-    <?= $this->include('pages/section/restaurant-section');?>
-    
-   
+    <?= $this->include('pages/section/restaurant-section'); ?>
+
+
     <!-- Contact Section -->
-    <?= $this->include('pages/section/contact-section');?>
+    <?= $this->include('pages/section/contact-section'); ?>
 
     <section class="ftco-section ftco-no-pt ftco-no-pb">
         <div id="map" class="bg-white"></div>
     </section>
 
     <!-- Gallery Section -->
-    <?= $this->include('pages/section/gallery-section');?>
+    <?= $this->include('pages/section/gallery-section'); ?>
 
     <!-- End of Section -->
 
     <!-- Footer -->
-    <?= $this->include('pages/footer/footer');?>
+    <?= $this->include('pages/footer/footer'); ?>
 
 
 
@@ -55,4 +55,4 @@
         </svg>
     </div>
 
-<?= $this->endSection(); ?>
+    <?= $this->endSection(); ?>
