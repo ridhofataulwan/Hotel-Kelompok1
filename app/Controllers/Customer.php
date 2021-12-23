@@ -18,6 +18,7 @@ class Customer extends BaseController
     {
         $data = [
             'customer' => $this->customerModel->getCustomerByUser(user_id()),
+            'user'
         ];
         return view('User/profile', $data);
     }

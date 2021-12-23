@@ -33,7 +33,7 @@
         <div class="loader"></div>
     </div>
 
-    
+
     <!-- Header Section Begin -->
     <?= $this->include('pages/book/navbar'); ?>
     <!-- Header End -->
@@ -44,9 +44,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-text">
-                        <h2>Room Details</h2>
+                        <h2>Item Details</h2>
                         <div class="bt-option">
-                            <a href="./home.html">Rooms</a>
+                            <a href="./home.html">Items</a>
                             <span>Details</span>
                         </div>
                     </div>
@@ -57,15 +57,21 @@
     <!-- Breadcrumb Section End -->
 
     <!-- Room Details Section Begin -->
+    <?php
+    function rupiah($angka)
+    {
+        return "Rp " . number_format($angka, 2, ',', '.');
+    }
+    ?>
     <section class="animate__animated animate__fadeIn room-details-section spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
                     <div class="room-details-item">
-                        <img src="/book/img/room/room-details.jpg" alt="">
+                        <img src="<?= $items['items_image'] ?>" alt="">
                         <div class="rd-text">
                             <div class="rd-title">
-                                <h3>Premium King Room</h3>
+                                <h3><?= $items['items_name'] ?></h3>
                                 <div class="rdt-right">
                                     <div class="rating">
                                         <i class="icon_star"></i>
@@ -76,108 +82,30 @@
                                     </div>
                                 </div>
                             </div>
-                            <h2>159$<span>/Pernight</span></h2>
+                            <h2><?= rupiah($items['items_price']) ?><span>/Pernight</span></h2>
                             <table>
                                 <tbody>
                                     <tr>
-                                        <td class="r-o">Size:</td>
-                                        <td>30 ft</td>
+                                        <td class="r-o">City: </td>
+                                        <td><?= $items['items_city'] ?></td>
                                     </tr>
                                     <tr>
-                                        <td class="r-o">Capacity:</td>
-                                        <td>Max persion 5</td>
+                                        <td class="r-o">Type:</td>
+                                        <td><?= $items['items_type'] ?></td>
                                     </tr>
                                     <tr>
-                                        <td class="r-o">Bed:</td>
-                                        <td>King Beds</td>
+                                        <td class="r-o">Address:</td>
+                                        <td><?= $items['items_address'] ?></td>
                                     </tr>
                                     <tr>
-                                        <td class="r-o">Services:</td>
-                                        <td>Wifi, Television, Bathroom,...</td>
+                                        <td class="r-o">Facility:</td>
+                                        <td><?= $items['items_facility'] ?></td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <p class="f-para">Motorhome or Trailer that is the question for you. Here are some of the
-                                advantages and disadvantages of both, so you will be confident when purchasing an RV.
-                                When comparing Rvs, a motorhome or a travel trailer, should you buy a motorhome or fifth
-                                wheeler? The advantages and disadvantages of both are studied so that you can make your
-                                choice wisely when purchasing an RV. Possessing a motorhome or fifth wheel is an
-                                achievement of a lifetime. It can be similar to sojourning with your residence as you
-                                search the various sites of our great land, America.</p>
-                            <p>The two commonly known recreational vehicle classes are the motorized and towable.
-                                Towable rvs are the travel trailers and the fifth wheel. The rv travel trailer or fifth
-                                wheel has the attraction of getting towed by a pickup or a car, thus giving the
-                                adaptability of possessing transportation for you when you are parked at your campsite.
+                            <p class="f-para"><?= $items['items_desc'] ?>
                             </p>
                         </div>
-                    </div>
-                    <div class="rd-reviews">
-                        <h4>Reviews</h4>
-                        <div class="review-item">
-                            <div class="ri-pic">
-                                <img src="/book/img/room/avatar/avatar-1.jpg" alt="">
-                            </div>
-                            <div class="ri-text">
-                                <span>27 Aug 2019</span>
-                                <div class="rating">
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star-half_alt"></i>
-                                </div>
-                                <h5>Brandon Kelley</h5>
-                                <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-                                    adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et dolore
-                                    magnam.</p>
-                            </div>
-                        </div>
-                        <div class="review-item">
-                            <div class="ri-pic">
-                                <img src="/book/img/room/avatar/avatar-2.jpg" alt="">
-                            </div>
-                            <div class="ri-text">
-                                <span>27 Aug 2019</span>
-                                <div class="rating">
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star-half_alt"></i>
-                                </div>
-                                <h5>Brandon Kelley</h5>
-                                <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-                                    adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et dolore
-                                    magnam.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="review-add">
-                        <h4>Add Review</h4>
-                        <form action="#" class="ra-form">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <input type="text" placeholder="Name*">
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" placeholder="Email*">
-                                </div>
-                                <div class="col-lg-12">
-                                    <div>
-                                        <h5>You Rating:</h5>
-                                        <div class="rating">
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star-half_alt"></i>
-                                        </div>
-                                    </div>
-                                    <textarea placeholder="Your Review"></textarea>
-                                    <button type="submit">Submit Now</button>
-                                </div>
-                            </div>
-                        </form>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -218,7 +146,7 @@
     </section>
     <!-- Room Details Section End -->
 
-    <?= $this->include('pages/footer/footer');?>
+    <?= $this->include('pages/footer/footer'); ?>
 
     <!-- Search model Begin -->
     <div class="search-model">

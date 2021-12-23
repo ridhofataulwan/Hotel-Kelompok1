@@ -17,7 +17,10 @@ class Items extends BaseController
             'title' => 'Dashboard',
         ];
 
-        $data2 = ['title' => 'Homepage'];
+        $data2 = [
+            'title' => 'Homepage',
+            'items' => $this->itemsModel->getItems()
+        ];
         if (in_groups('admin')) {
             return view('Admin/index', $data);
         } else if (in_groups('customer')) {
@@ -29,11 +32,19 @@ class Items extends BaseController
 
     public function listItems()
     {
-        $data = [
-            'items' => $this->itemsModel->getItems(),
-            'title' => 'Item List'
-        ];
-        return view('Admin/items/listItems', $data);
+        if (in_groups('admin')) {
+            $data = [
+                'items' => $this->itemsModel->getItems(),
+                'title' => 'Item List'
+            ];
+            return view('Admin/items/listItems', $data);
+        } else if (in_groups('customer')) {
+            $data = [
+                'items' => $this->itemsModel->getItems(),
+                'title' => 'Item List'
+            ];
+            return view('pages/book/rooms', $data);
+        }
     }
 
     public function oneItem($id_item)

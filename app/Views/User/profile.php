@@ -65,10 +65,6 @@
                             <span>Status</span>
                             <span class="ml-auto"><span class="bg-green-500 py-1 px-2 rounded text-white text-sm">Active</span></span>
                         </li>
-                        <li class="flex items-center py-3">
-                            <span>Member since</span>
-                            <span class="ml-auto">Nov 07, 2016</span>
-                        </li>
                     </ul>
                 </div>
                 <!-- End of profile card -->
