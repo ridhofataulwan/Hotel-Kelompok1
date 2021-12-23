@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\CustomerModel;
+use App\Models\ItemsModel;
 
 class Home extends BaseController
 {
@@ -10,6 +11,7 @@ class Home extends BaseController
     {
         helper(['form', 'url', 'auth']);
         $this->customerModel = new CustomerModel();
+        $this->itemsModel = new ItemsModel();
     }
     public function index()
     {
@@ -20,12 +22,19 @@ class Home extends BaseController
                 $this->customerModel->createCustomerProfile(user_id());
             }
 
-            $data = [   
+            $data = [
                 'title' => 'Welcome To Ecoland',
+                'items' => $this->itemsModel->getItems()
             ];
             return view('pages/index', $data);
         } else if (in_groups('admin')) {
             return redirect()->to('Admin/');
+        } else {
+            $data = [
+                'title' => 'Welcome To Ecoland',
+                'items' => $this->itemsModel->getItems()
+            ];
+            return view('pages/index', $data);
         }
     }
 }
