@@ -67,6 +67,7 @@ class Items extends BaseController
     {
         $data = [
             'itemBaru' => True, //Hmmm, ini buat nambah bedain antara form tambah atau form edit (formnya pake satu view aja)
+            'title' => "Add Items"
         ];
         return view('Admin/items/addItem', $data);
     }
@@ -86,27 +87,18 @@ class Items extends BaseController
             'items_price' => $this->request->getPost('harga_item'),
             'items_desc' => $this->request->getPost('deskripsi_item'),
             'items_facility' => $this->request->getPost('fasilitas_item'),
-            'items_images' => '',
         ];
         $this->itemsModel->addItem($data);
-        echo '
-                <script>
-                    alert("Item Berhasil Ditambahkan");
-                    window.location="' . base_url('Admin') . '";
-                </script>
-            ';
+        session()->setFlashData('pesan', 'Data has added successfully!');
+        return redirect()->to('items/listitems');
     }
 
     public function deleteItem($id)
     {
         //di tombol delete di view nya dikasih attribute onclick="return confirm('Anda yakin akan menghapus item?');"
-        $this->itemsModel->deleteItem($id);
-        echo '
-                <script>
-                    alert("Item Berhasil Dihapus");
-                    window.location="' . base_url('Admin') . '";
-                </script>
-            ';
+        $this->itemsModel->delete($id);
+        session()->setFlashData('pesan', 'Data has been deleted!');
+        return redirect()->to('items/listitems');
     }
 
     public function updateItemPage($item_id)
