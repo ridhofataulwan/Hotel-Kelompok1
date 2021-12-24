@@ -47,20 +47,18 @@ class Booking extends BaseController
     public function create($item_id)
     {
 
-        $img = $this->request->getFile('proof_book');
-        $name = $img->getName();
-        $ext = $img->getClientExtension();
-
-        //WORK WITH FILES NYA MASIH BELUM
-        $img->move("../public/images/proof" . 'uploads', $name);
+        $upload = $this->request->getFile('bukti_booking');
+        $upload->move('/images/proof/');
+        $customer = $this->customerModel->getCustomerIdByUser(user_id());
+        $customer_id = $customer['customer_id'];
         $data = [
             'booking_id' => '',
             'booking_price' => $this->request->getPost('harga_booking'),
             'booking_date_start' => $this->request->getPost('mulai_tanggal_booking'),
             'booking_date_stop' => $this->request->getPost('stop_tanggal_booking'),
-            'booking_proof_of_payment' => '/images/items/' . $name . '.' . $ext,
+            'booking_proof_of_payment' => '/images/proof/' . $upload->getName(),
             'booking_id_items' => $item_id,
-            'booking_id_customer' => $this->customerModel->getCustomerIdByUser(user_id()),
+            'booking_id_customer' => $customer_id,
             'booking_status' => 'pending'
         ];
 
@@ -68,7 +66,7 @@ class Booking extends BaseController
         echo '
                 <script>
                     alert("Booking Berhasil Dibuat!");
-                    window.location="' . base_url('Home/') . '";
+                    window.location="' . base_url('Items/') . '";
                 </script>
             ';
     }
