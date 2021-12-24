@@ -48,7 +48,7 @@ class Booking extends BaseController
     {
 
         $upload = $this->request->getFile('bukti_booking');
-        $upload->move('/images/proof/');
+        $upload->move('../public/images/proof/');
         $customer = $this->customerModel->getCustomerIdByUser(user_id());
         $customer_id = $customer['customer_id'];
         $data = [

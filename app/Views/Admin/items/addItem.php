@@ -186,9 +186,9 @@
                         <div class="form-control">
                             <select class="form-select" aria-label="Default select example" name="items_images">
                                 <option selected>Images of Items</option>
-                                <option value="#">Images 1</option>
-                                <option value="#">Images 2</option>
-                                <option value="#">Images 3</option>
+                                <option value="/images/items/C-3.jpg">C-3</option>
+                                <option value="/images/items/D-3.jpg">D-3</option>
+                                <option value="/images/items/B-4.jpg">B-4</option>
                             </select>
 
                         </div>

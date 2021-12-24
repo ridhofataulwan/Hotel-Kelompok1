@@ -40,7 +40,7 @@ class Items extends BaseController
     {
         if (in_groups('admin')) {
             $data = [
-                'items' => $this->itemsModel->getItems(),
+                'items' => $this->itemsModel->getItemsAdmin(),
                 'title' => 'Item List'
             ];
             return view('Admin/items/listItems', $data);
@@ -67,7 +67,7 @@ class Items extends BaseController
     {
         $data = [
             'itemBaru' => True, //Hmmm, ini buat nambah bedain antara form tambah atau form edit (formnya pake satu view aja)
-            'title' => "Add Items"
+            'title' => "Add Items",
         ];
         return view('Admin/items/addItem', $data);
     }
@@ -108,7 +108,7 @@ class Items extends BaseController
             'title' => 'Update',
             'itemBaru' => False,
         ];
-  
+
         return view('admin/items/edit', $data);
     }
 
