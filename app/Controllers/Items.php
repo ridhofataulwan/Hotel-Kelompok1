@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\CustomerModel;
 use App\Models\ItemsModel;
 
 class Items extends BaseController
@@ -10,6 +11,7 @@ class Items extends BaseController
     {
         helper(['form', 'url', 'auth']);
         $this->itemsModel = new ItemsModel();
+        $this->customerModel = new CustomerModel();
     }
     public function index()
     {
@@ -24,6 +26,10 @@ class Items extends BaseController
         if (in_groups('admin')) {
             return view('Admin/index', $data);
         } else if (in_groups('customer')) {
+            if (empty($this->customerModel->getCustomerByUser(user_id()))) {
+                //Ini buat bikin profile customer klo baru create(isi = default)
+                $this->customerModel->createCustomerProfile(user_id());
+            }
             return view('pages/index', $data2);
         } else {
             return view('pages/index', $data2);
