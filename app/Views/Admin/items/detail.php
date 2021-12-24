@@ -1,7 +1,6 @@
 <?= $this->extend('Admin/template/index'); ?>
 <?= $this->section('content'); ?>
 <div class="wrapper">
-
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-dark">
         <!-- Left navbar links -->
@@ -11,7 +10,6 @@
             </li>
 
         </ul>
-
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto">
             <!-- Navbar Search -->
@@ -49,14 +47,18 @@
     <div class="content-wrapper">
         <div class="content-header">
             <div class="container-fluid">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                <div class="card mb-3">
+                    <img src="<?= base_url() . $item['items_image']; ?>" class="card-img-top rounded-md" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="text-center text-3xl"><?= $item['items_name'];?></h5> 
+                        <p class="card-text">Kota: <?= $item['items_city'];?></p>
+                        <p class="card-text">Alamat: <?= $item['items_address'];?></p>
+                        <p class="card-text">Fasilitas: <?= $item['items_facility'];?></p>
+                        <p class="card-text font-bold">Harga: <?= $item['items_price'];?></p>
+                        <p class="card-text"><small class="text-muted"><?= $item['items_desc']; ?></small></p>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
