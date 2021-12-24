@@ -13,8 +13,72 @@ class Items extends BaseController
         $this->itemsModel = new ItemsModel();
         $this->customerModel = new CustomerModel();
     }
+
     public function index()
     {
+        // $OTP_OKE = session()->get('OTP-OKE');
+        // // Membuat nilai OTP dan Session untuk OTP
+        // if (!isset($OTP_OKE)) {
+        //     $OTP = rand(1000, 9000);
+        //     $_SESSION['otp'] = $OTP;
+
+        //     // Mengambil Nilai Email
+        //     $email_user = user()->email;
+
+        //     // Mengaktifkan Service Email
+        //     $email = \Config\Services::email();
+
+        //     $email->setFrom('inibudisetyawan@gmail.com', 'Admin Ecoland');
+        //     $email->setTo($email_user);
+
+        //     $email->setSubject('Kode OTP - Verifikasi Login Ecoland');
+        //     $email->setMessage($OTP);
+
+        //     // Mengirim e-mail
+        //     // if ($email->send()) {
+        //     //     echo "Sukses Mengirim" . $OTP;
+        //     // } else {
+        //     //     echo 'Invalid';
+        //     // }
+        //     return view('auth/otp');
+        // } else {
+
+        $data = [
+            'title' =>  'Dashboard',
+        ];
+
+        $data2 = [
+            'title' => 'Homepage',
+            'items' => $this->itemsModel->getItems()
+        ];
+        if (in_groups('admin')) {
+            return view('Admin/index', $data);
+        } else if (in_groups('customer')) {
+            if (empty($this->customerModel->getCustomerByUser(user_id()))) {
+                //Ini buat bikin profile customer klo baru create(isi = default)
+                $this->customerModel->createCustomerProfile(user_id());
+            }
+            return view('pages/index', $data2);
+        } else {
+            return view('pages/index', $data2);
+        }
+        return view('pages/index');
+        // }
+    }
+
+    public function landing()
+    {
+        // $OTP_OKE = session()->get('OTP-OKE');
+        // // Membuat nilai OTP dan Session untuk OTP
+        // if (!isset($OTP_OKE)) {
+        //     $OTP_INPUT =  $_GET['otp'];
+        //     $OTP = session()->get('otp');
+        //     if ($OTP_INPUT != $OTP) {
+        //         session()->setFlashData('otpsalah', 'Kode OTP Anda Salah!');
+        //         return view('/logout');
+        //     }
+        // }
+        // $_SESSION['OTP-OKE'] = 'Oke';
         $data = [
             'title' =>  'Dashboard',
         ];

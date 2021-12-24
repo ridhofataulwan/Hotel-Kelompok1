@@ -4,10 +4,14 @@
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <!-- Navbar -->
     <?= $this->include('pages/navbar'); ?>
-
+    <?php if (session()->getFlashdata('otpsalah')) : ?>
+        <div class="alert alert-danger">
+            <?= session()->getFlashdata('otpsalah'); ?>
+        </div>
+    <?php endif; ?>
 
     <!-- Section List -->
-    
+
     <!-- Home Section -->
     <?= $this->include('pages/section/home-section'); ?>
 
