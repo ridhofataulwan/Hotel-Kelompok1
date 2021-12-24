@@ -14,7 +14,7 @@ class Items extends BaseController
     public function index()
     {
         $data = [
-            'title' => 'Dashboard',
+            'title' =>  'Dashboard',
         ];
 
         $data2 = [
@@ -52,7 +52,7 @@ class Items extends BaseController
         $data = [
             'item' => $this->itemsModel->getItems($id_item)
         ];
-        return view('HALAMAN DETAIL ITEM NYA', $data);
+        return view('pages/admin/detailItems', $data);
     }
 
     public function addItemPage()

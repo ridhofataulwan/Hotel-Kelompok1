@@ -1,10 +1,6 @@
 <?= $this->extend('Admin/template/index'); ?>
 <?= $this->section('content'); ?>
 <div class="wrapper">
-    <!-- Preloader -->
-    <div class="preloader flex-column justify-content-center align-items-center">
-        <img class="animation__wobble" src="/admin/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-    </div>
 
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-dark">
@@ -89,7 +85,11 @@
                             <th scope="row"><?= $num++ ?></th>
                             <td><?= $i['items_name'] ?></td>
                             <td><?= $i['items_type'] ?></td>
-                            <td>-</td>
+                            <td>
+                                <a href=""> <i class="fas fa-eye"></i></a>
+                                <a href=""><i class="mx-2 fas fa-pencil-alt"></i></a>
+                                <a href=""><i class="fas fa-trash"></i></a>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

@@ -7,7 +7,7 @@
 
 
     <!-- Section List -->
-
+    
     <!-- Home Section -->
     <?= $this->include('pages/section/home-section'); ?>
 
