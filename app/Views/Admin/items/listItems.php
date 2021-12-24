@@ -59,6 +59,9 @@
                 <?php endif; ?>
                 <div class="row mb-2">
                     <div class="col-sm-6">
+                        <a href="/items/addItemPage">
+                            <button class="btn btn-primary mb-2">Add Item</button>
+                        </a>
                         <h1 class="m-0">Item list</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
@@ -93,7 +96,13 @@
                             <td>
                                 <a href="<?= base_url() . '/Items/oneItem/' . $i['items_id']; ?>"> <i class="fas fa-eye"></i></a>
                                 <a href="<?= base_url() . '/Items/updateItemPage/' . $i['items_id']; ?>"><i class="mx-2 fas fa-pencil-alt"></i></a>
-                                <a href=""><i class="fas fa-trash"></i></a>
+                                <form action="/items/<?= $i['items_id']; ?>" method="POST" class="d-inline">
+                                    <?= csrf_field(); ?>
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" style="background: transparent; border: none !important; color: #fff;">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </form>
                             </td>
                         </tr>
                     <?php endforeach; ?>

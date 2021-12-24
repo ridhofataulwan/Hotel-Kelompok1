@@ -50,8 +50,11 @@
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Type</label>
-                        <input type="text" name="tipe_item" value="<?= $item['items_type']; ?>" class="form-control">
+                    <label class="form-label block">Tipe</label>
+                    <select class="form-select" name="tipe_item">
+                        <option value="hotel">Hotel</option>
+                        <option value="villa">Villa</option>
+                    </select>
                     </div>
 
                     <div class="mb-3">
@@ -71,7 +74,7 @@
 
                     <div class="mb-3">
                         <label class="form-label">Description</label>
-                        <textarea type="text" name="deskripsi_item"  class="form-control"><?= $item['items_desc']; ?></textarea>
+                        <textarea type="text" name="deskripsi_item" class="form-control"><?= $item['items_desc']; ?></textarea>
                     </div>
 
                     <div class="mb-3">
