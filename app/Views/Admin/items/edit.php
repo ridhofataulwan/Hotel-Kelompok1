@@ -1,7 +1,6 @@
 <?= $this->extend('Admin/template/index'); ?>
 <?= $this->section('content'); ?>
 <div class="wrapper">
-
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-dark">
         <!-- Left navbar links -->
@@ -11,7 +10,6 @@
             </li>
 
         </ul>
-
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto">
             <!-- Navbar Search -->
@@ -38,26 +36,49 @@
         </ul>
     </nav>
     <!-- /.navbar -->
-
     <!-- Main Sidebar Container -->
     <?= $this->include('Admin/template/sidebar'); ?>
+
     <div class="content-wrapper">
         <div class="content-header">
             <div class="container-fluid">
-                <form>
+                <form method="POST" action="/items/updateItem/<?= $item['items_id']; ?>">
+
+                    <div class=" mb-3">
+                        <label class="form-label">Name</label>
+                        <input type="text" name="nama_item" value="<?= $item['items_name']; ?>" class="form-control">
+                    </div>
+
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        <label class="form-label">Type</label>
+                        <input type="text" name="tipe_item" value="<?= $item['items_type']; ?>" class="form-control">
                     </div>
+
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
+                        <label class="form-label">City</label>
+                        <input type="text" name="kota_item" value="<?= $item['items_city']; ?>" class="form-control">
                     </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+
+                    <div class="mb-3">
+                        <label class="form-label">Address</label>
+                        <input type="text" name="alamat_item" value="<?= $item['items_address']; ?>" class="form-control">
                     </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Price</label>
+                        <input type="text" name="harga_item" value="<?= $item['items_price']; ?>" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Description</label>
+                        <textarea type="text" name="deskripsi_item"  class="form-control"><?= $item['items_desc']; ?></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Facility</label>
+                        <textarea type="text" name="fasilitas_item" class="form-control"><?= $item['items_facility']; ?></textarea>
+                    </div>
+
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>

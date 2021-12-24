@@ -1,10 +1,6 @@
 <?= $this->extend('Admin/template/index'); ?>
 <?= $this->section('content'); ?>
 <div class="wrapper">
-    <!-- Preloader -->
-    <div class="preloader flex-column justify-content-center align-items-center">
-        <img class="animation__wobble" src="/admin/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-    </div>
 
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-dark">
@@ -56,6 +52,11 @@
         <!-- Content Header (Page header) -->
         <div class="content-header">
             <div class="container-fluid">
+                <?php if (session()->getFlashData('pesan')) : ?>
+                    <div class="mb-4 bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded relative" role="alert">
+                        <strong class="font-bold"><?= session()->getFlashData('pesan'); ?></strong>
+                    </div>
+                <?php endif; ?>
                 <div class="row mb-2">
                     <div class="col-sm-6">
                         <h1 class="m-0">Item list</h1>
@@ -89,7 +90,11 @@
                             <th scope="row"><?= $num++ ?></th>
                             <td><?= $i['items_name'] ?></td>
                             <td><?= $i['items_type'] ?></td>
-                            <td>-</td>
+                            <td>
+                                <a href="<?= base_url() . '/Items/oneItem/' . $i['items_id']; ?>"> <i class="fas fa-eye"></i></a>
+                                <a href="<?= base_url() . '/Items/updateItemPage/' . $i['items_id']; ?>"><i class="mx-2 fas fa-pencil-alt"></i></a>
+                                <a href=""><i class="fas fa-trash"></i></a>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

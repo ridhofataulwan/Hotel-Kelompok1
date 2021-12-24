@@ -124,7 +124,7 @@
                             </div>
                             <div class="select-option">
                                 <label for="guest">Input Payment Proof:</label>
-                                <input type="file" name="bukti_booking" class="form-control">
+                                <input type="file" id="inputGroupFile01" name="bukti_booking" class="form-control">
                             </div>
                             <input type="hidden" value="<?= $items['items_price'] ?>" name="harga_booking">
                             <button name='submit' type="submit">Book Now</button>

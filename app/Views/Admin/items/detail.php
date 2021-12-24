@@ -1,7 +1,6 @@
 <?= $this->extend('Admin/template/index'); ?>
 <?= $this->section('content'); ?>
 <div class="wrapper">
-
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-dark">
         <!-- Left navbar links -->
@@ -11,7 +10,6 @@
             </li>
 
         </ul>
-
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto">
             <!-- Navbar Search -->
@@ -35,32 +33,35 @@
                     </form>
                 </div>
             </li>
+
+
+
+
         </ul>
     </nav>
     <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
     <?= $this->include('Admin/template/sidebar'); ?>
+
     <div class="content-wrapper">
         <div class="content-header">
             <div class="container-fluid">
-                <form>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <div class="card mb-3">
+                    <img src="<?= base_url() . $item['items_image']; ?>" class="card-img-top rounded-md" alt="...">
+                    <div class="card-body">
+                        <h5 class="text-center text-3xl"><?= $item['items_name'];?></h5> 
+                        <p class="card-text">Kota: <?= $item['items_city'];?></p>
+                        <p class="card-text">Alamat: <?= $item['items_address'];?></p>
+                        <p class="card-text">Fasilitas: <?= $item['items_facility'];?></p>
+                        <p class="card-text font-bold">Harga: <?= $item['items_price'];?></p>
+                        <p class="card-text"><small class="text-muted"><?= $item['items_desc']; ?></small></p>
                     </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                </div>
+
             </div>
         </div>
     </div>
+
+
     <?= $this->endSection(); ?>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2021 at 10:34 AM
+-- Generation Time: Dec 24, 2021 at 02:31 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -147,7 +147,18 @@ INSERT INTO `auth_logins` (`id`, `ip_address`, `email`, `user_id`, `date`, `succ
 (10, '::1', 'its.nrizky@student.uns.ac.id', 1, '2021-12-09 02:08:34', 1),
 (11, '::1', 'admin@admin.com', 3, '2021-12-19 02:34:27', 1),
 (12, '::1', 'pelanggan2@gmail.com', 4, '2021-12-19 02:39:32', 1),
-(13, '::1', 'admin@admin.com', 3, '2021-12-19 03:07:05', 1);
+(13, '::1', 'admin@admin.com', 3, '2021-12-19 03:07:05', 1),
+(14, '::1', 'pelanggan2@gmail.com', 4, '2021-12-19 03:47:44', 1),
+(15, '::1', 'admin@admin.com', 3, '2021-12-19 07:26:51', 1),
+(16, '::1', 'pelanggan2@gmail.com', 4, '2021-12-19 07:28:12', 1),
+(17, '::1', 'pelanggan2@gmail.com', 4, '2021-12-21 07:47:39', 1),
+(18, '::1', 'admin@admin.com', 3, '2021-12-21 07:53:57', 1),
+(19, '::1', 'pelanggan2@gmail.com', 4, '2021-12-21 07:55:25', 1),
+(20, '::1', 'admin@admin.com', 3, '2021-12-21 08:16:46', 1),
+(21, '::1', 'pelanggan2@gmail.com', 4, '2021-12-21 08:32:04', 1),
+(22, '::1', 'pelanggan2@gmail.com', 4, '2021-12-21 09:41:02', 1),
+(23, '::1', 'admin@admin.com', 3, '2021-12-23 18:18:38', 1),
+(24, '::1', 'pelanggan2@gmail.com', 4, '2021-12-23 18:49:54', 1);
 
 -- --------------------------------------------------------
 
@@ -217,7 +228,6 @@ CREATE TABLE `auth_users_permissions` (
 
 CREATE TABLE `booking` (
   `booking_id` int(3) NOT NULL,
-  `booking_duration` int(3) NOT NULL,
   `booking_price` int(255) NOT NULL,
   `booking_date_start` datetime NOT NULL,
   `booking_date_stop` datetime NOT NULL,
@@ -277,15 +287,17 @@ CREATE TABLE `items` (
   `items_address` text NOT NULL,
   `items_price` int(255) NOT NULL,
   `items_desc` text NOT NULL,
-  `items_facility` text NOT NULL
+  `items_facility` text NOT NULL,
+  `items_image_id` int(3) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `items`
 --
 
-INSERT INTO `items` (`items_id`, `items_name`, `items_type`, `items_city`, `items_address`, `items_price`, `items_desc`, `items_facility`) VALUES
-(1, 'Hotel Satu', 'hotel', 'Surakarta', 'JL. Surakarta no 1', 2000000, 'Ini deskripsi hotel', 'ini isi dari hotelnya');
+INSERT INTO `items` (`items_id`, `items_name`, `items_type`, `items_city`, `items_address`, `items_price`, `items_desc`, `items_facility`, `items_image_id`) VALUES
+(2, 'Hotel Dua', 'hotel', 'Surakarta', 'Alamat Hotel', 1500000, 'Deskripsi Lokasi Hotel', 'Fasilitas Hotel', 3),
+(3, 'Hotel Tiga', 'hotel', 'Jakarta', 'Alamat Hotel Tiga', 3000000, 'Deskripsi Hotel 3', 'Fasilitas Hotel 3', 6);
 
 -- --------------------------------------------------------
 
@@ -304,8 +316,14 @@ CREATE TABLE `items_image` (
 --
 
 INSERT INTO `items_image` (`items_image_id`, `items_id`, `items_image`) VALUES
-(1, 1, 'Ini gambar Hotel Satu'),
-(2, 1, 'Ini Gambar Hotel Satu Kedua');
+(1, NULL, 'Ini gambar Hotel Satu'),
+(2, NULL, 'Ini Gambar Hotel Satu Kedua'),
+(3, 2, '/images/items/hotel-1.jpg'),
+(4, 2, '/images/items/hotel-3.jpg'),
+(5, 2, '/images/items/room-3.jpg'),
+(6, 3, '/images/items/hotel-4.jpg'),
+(7, 3, '/images/items/room-4.jpg'),
+(8, 3, '/images/items/room-5.jpg');
 
 -- --------------------------------------------------------
 
@@ -463,7 +481,8 @@ ALTER TABLE `customer`
 -- Indexes for table `items`
 --
 ALTER TABLE `items`
-  ADD PRIMARY KEY (`items_id`);
+  ADD PRIMARY KEY (`items_id`),
+  ADD KEY `Items Images` (`items_image_id`);
 
 --
 -- Indexes for table `items_image`
@@ -512,7 +531,7 @@ ALTER TABLE `auth_groups`
 -- AUTO_INCREMENT for table `auth_logins`
 --
 ALTER TABLE `auth_logins`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `auth_permissions`
@@ -554,13 +573,13 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `items_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `items_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `items_image`
 --
 ALTER TABLE `items_image`
-  MODIFY `items_image_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `items_image_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -630,6 +649,12 @@ ALTER TABLE `confirmation`
 --
 ALTER TABLE `customer`
   ADD CONSTRAINT `User Customer` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Constraints for table `items`
+--
+ALTER TABLE `items`
+  ADD CONSTRAINT `Items Images` FOREIGN KEY (`items_image_id`) REFERENCES `items_image` (`items_image_id`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `items_image`

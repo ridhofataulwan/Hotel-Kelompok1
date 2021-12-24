@@ -16,7 +16,7 @@ class Items extends BaseController
     public function index()
     {
         $data = [
-            'title' => 'Dashboard',
+            'title' =>  'Dashboard',
         ];
 
         $data2 = [
@@ -56,9 +56,11 @@ class Items extends BaseController
     public function oneItem($id_item)
     {
         $data = [
-            'item' => $this->itemsModel->getItems($id_item)
+            'item' => $this->itemsModel->getItems($id_item),
+            'title' => 'Detail'
         ];
-        return view('HALAMAN DETAIL ITEM NYA', $data);
+        // dd($data);  
+        return view('admin/items/detail', $data);
     }
 
     public function addItemPage()
@@ -110,11 +112,12 @@ class Items extends BaseController
     public function updateItemPage($item_id)
     {
         $data = [
-            'item' => $this->itemsModel->getItem($item_id)[0],
+            'item' => $this->itemsModel->getItems($item_id),
+            'title' => 'Update',
             'itemBaru' => False,
         ];
-
-        return view('HALAMAN FORM NYA', $data);
+  
+        return view('admin/items/edit', $data);
     }
 
     public function updateItem($item_id)
@@ -124,20 +127,16 @@ class Items extends BaseController
             //Kalo ga, yang di view name dari inputnya yang ngikutin yang disini
 
             //Mungkin cek error input nambah datanya dibuat di html e aja kali ya, biar ga ribet
-            'items_name' => $this->request->getPost('nama_item'),
-            'items_type' => $this->request->getPost('tipe_item'),
-            'items_city' => $this->request->getPost('kota_item'),
-            'items_address' => $this->request->getPost('alamat_item'),
-            'items_price' => $this->request->getPost('harga_item'),
-            'items_desc' => $this->request->getPost('deskripsi_item'),
-            'items_facility' => $this->request->getPost('fasilitas_item'),
+            'items_name' => $this->request->getVar('nama_item'),
+            'items_type' => $this->request->getVar('tipe_item'),
+            'items_city' => $this->request->getVar('kota_item'),
+            'items_address' => $this->request->getVar('alamat_item'),
+            'items_price' => $this->request->getVar('harga_item'),
+            'items_desc' => $this->request->getVar('deskripsi_item'),
+            'items_facility' => $this->request->getVar('fasilitas_item'),
         ];
         $this->itemsModel->updateItem($item_id, $data);
-        echo '
-                <script>
-                    alert("Item Berhasil Diubah");
-                    window.location="' . base_url('Admin') . '";
-                </script>
-            ';
+        session()->setFlashData('pesan', 'Data has been updated successfully!');
+        return redirect()->to('items/listitems');
     }
 }
