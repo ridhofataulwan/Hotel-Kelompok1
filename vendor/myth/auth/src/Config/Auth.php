@@ -16,7 +16,7 @@ class Auth extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $customerGroup = 'customer';
+	public $defaultUserGroup = 'customer';
 
 	/**
 	 * --------------------------------------------------------------------
