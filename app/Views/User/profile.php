@@ -110,7 +110,7 @@
                         </div>
                     </div>
                     <button class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">
-                        <a href="/customer/update/<?= $customer['customer_id'] ?>"><i class="fas fa-pencil-alt"></i> Edit Profile</a>
+                        <a href="<?= base_url('Profile/update') ?>"><i class="fas fa-pencil-alt"></i> Edit Profile</a>
                     </button>
                 </div>
                 <!-- End of about section -->

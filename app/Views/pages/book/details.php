@@ -68,7 +68,7 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="room-details-item">
-                        <img src="<?= $items['items_image'] ?>" alt="">
+                        <img src="<?= $items['items_thumbnail'] ?>" alt="">
                         <div class="rd-text">
                             <div class="rd-title">
                                 <h3><?= $items['items_name'] ?></h3>
@@ -111,7 +111,7 @@
                 <div class="col-lg-4">
                     <div class="room-booking">
                         <h3>Your Reservation</h3>
-                        <form method="post" action="<?= base_url('booking/create/' . $items['items_id']) ?>" enctype="multipart/form-data">
+                        <form method="post" action="<?= base_url('Items/book/' . $items['items_id']) ?>" enctype="multipart/form-data">
                             <div class="check-date">
                                 <label for="date-in">Check In:</label>
                                 <input name="mulai_tanggal_booking" type="text" class="date-input" id="date-in">
