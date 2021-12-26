@@ -38,12 +38,12 @@ class Auth extends BaseConfig
 	 */
 	public $views = [
 		// 'login'		   => 'Myth\Auth\Views\login',
-		'login'		   => '\App\Views\Auth\login',
-		'register'		   => '\App\Views\Auth\register',
 		// 'register'		=> 'Myth\Auth\Views\register',
-		'forgot'		  => 'Myth\Auth\Views\forgot',
-		'reset'		   => 'Myth\Auth\Views\reset',
-		'emailForgot'	 => 'Myth\Auth\Views\emails\forgot',
+		'login'		      => '\App\Views\Auth\login',
+		'register'	      => '\App\Views\Auth\register',
+		'forgot'	      => 'Myth\Auth\Views\forgot',
+		'reset'		      => 'Myth\Auth\Views\reset',
+		'emailForgot'	  => 'Myth\Auth\Views\emails\forgot',
 		'emailActivation' => 'Myth\Auth\Views\emails\activation',
 	];
 
@@ -66,7 +66,7 @@ class Auth extends BaseConfig
 	 * @var string[]
 	 */
 	public $validFields = [
-		// 'email',
+		'email',
 		'username',
 	];
 
@@ -152,7 +152,7 @@ class Auth extends BaseConfig
 	 * @var string|null Name of the ActivatorInterface class
 	 */
 	// public $requireActivation = 'Myth\Auth\Authentication\Activators\EmailActivator';
-	public $requireActivation = null; //false;
+	public $requireActivation = null; #false
 
 	/**
 	 * --------------------------------------------------------------------
@@ -165,7 +165,7 @@ class Auth extends BaseConfig
 	 * @var string|null Name of the ResetterInterface class
 	 */
 	// public $activeResetter = 'Myth\Auth\Authentication\Resetters\EmailResetter';
-	public $activeResetter = null; //false;
+	public $activeResetter = null; #false
 
 	/**
 	 * --------------------------------------------------------------------
@@ -180,7 +180,7 @@ class Auth extends BaseConfig
 	 *
 	 * @var bool
 	 */
-	public $allowRemembering = true;
+	public $allowRemembering = false;
 
 	/**
 	 * --------------------------------------------------------------------

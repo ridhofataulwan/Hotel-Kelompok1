@@ -34,7 +34,6 @@ class Filters extends BaseConfig
         'before' => [
             // 'honeypot',
             // 'csrf',
-            //'login',
         ],
         'after' => [
             'toolbar',
@@ -62,7 +61,7 @@ class Filters extends BaseConfig
      *
      * @var array
      */
-    // public $filters = [
-    //     'login' => ['before' => ['']]
-    // ];
+    public $filters = [
+        'login' => ['before' => ['Admin/', 'Booking/', 'Cutomer/', 'Items']] #nanti set jadi semua controller kecuali buat guest
+    ];
 }

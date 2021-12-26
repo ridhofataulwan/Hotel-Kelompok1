@@ -6,11 +6,11 @@
         <div class="row justify-content-center">
             <div class="col-md-6 text-center mb-5">
                 <a href="<?= base_url(); ?>">
-                <h2 class="heading-section">Welcome To Ecoland</h2>
+                    <h2 class="heading-section">Welcome To Ecoland</h2>
                 </a>
             </div>
         </div>
-        
+
         <div class="row justify-content-center">
             <div class="col-md-6 col-lg-4">
                 <div class="login-wrap p-0">
@@ -20,14 +20,16 @@
                     <form action="<?= route_to('login') ?>" method="post">
                         <?= csrf_field() ?>
 
-                        <?php if ($config->validFields === ['username']) : ?>
-                            <div class="form-group">
-                                <input type="text" name="login" class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>" placeholder="Username" required>
-                            </div>
-                            <div class="invalid-feedback">
-                                <?= session('errors.login') ?>
-                            </div>
-                        <?php endif; ?>
+                        <?php #if ($config->validFields === ['username']) : 
+                        ?>
+                        <div class="form-group">
+                            <input type="text" name="login" class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>" placeholder="Username" required>
+                        </div>
+                        <div class="invalid-feedback">
+                            <?= session('errors.login') ?>
+                        </div>
+                        <?php #endif; 
+                        ?>
 
                         <div class="form-group">
                             <input id="password-field" type="password" name="password" class="form-control <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="Password" required>

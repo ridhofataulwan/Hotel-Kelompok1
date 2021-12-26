@@ -65,10 +65,6 @@
                             <span>Status</span>
                             <span class="ml-auto"><span class="bg-green-500 py-1 px-2 rounded text-white text-sm">Active</span></span>
                         </li>
-                        <li class="flex items-center py-3">
-                            <span>Member since</span>
-                            <span class="ml-auto">Nov 07, 2016</span>
-                        </li>
                     </ul>
                 </div>
                 <!-- End of profile card -->
@@ -88,7 +84,7 @@
                         </span>
                         <span class="tracking-wide">About</span>
                     </div>
-                    <form action="<?= base_url(); ?>/customer/updateCustomer/<?= $customer['customer_id']; ?>">
+                    <form action="<?= base_url('/Profile/updating'); ?>">
                         <div class="text-gray-700">
                             <div class="grid md:grid-cols-2 text-sm">
                                 <div class="grid grid-cols-2">
@@ -117,7 +113,7 @@
                         <div class="flex flex-row  justify-center">
                             <button class="block w-full bg-green-500 mr-5 text-white text-sm font-semibold rounded-lg hover:bg-green-700 focus:outline-none focus:shadow-outline focus:bg-green-700 hover:shadow-xs p-3 my-4"> Save Changes</button>
                             <button class="block w-24 bg-red-500 text-white text-sm font-semibold rounded-lg hover:bg-red-700 focus:outline-none focus:shadow-outline focus:bg-red-700 hover:shadow-xs p-3 my-4">
-                                <a href="<?= base_url(); ?>/customer">Cancel</a>
+                                <a href="<?= base_url('/Profile'); ?>">Cancel</a>
                             </button>
                         </div>
                     </form>
