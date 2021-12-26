@@ -29,7 +29,7 @@ Nambah view buat profile user
 
 - Bagian Profile sudah fix (error sudah diperbaiki)
 - Bagian List Items sudah fix (join dihilangkan, sedikit perubahan pada ItemsModel untuk penyesuaian)
-- # Nambah dummy satu biji di bagian items dan items list (dummy juga di tabel customer buat tes method update profile) Harap update DB di lokal klean pake DB yang baru. (Folder Backup DB berisi database yang belum berisi dummy)
+- Nambah dummy satu biji di bagian items dan items list (dummy juga di tabel customer buat tes method update profile) Harap update DB di lokal klean pake DB yang baru. (Folder Backup DB berisi database yang belum berisi dummy)
 - Booking view done (Baru frontend belum di konek ke model)
 - Remove beberapa menu navbar
 - Remake view user profile
@@ -44,7 +44,7 @@ Nambah view buat profile user
 - Nambah view register
 - Navbar sudah di fix posisinya
 
-## Update 0.0.5
+## Huge Update 0.0.5
 
 HARAP BACKUP PROJECT YANG ADA DI DALAM LOKAL TERLEBIH DAHULU SEBELUM MELAKUKAN PULL!!
 DEMI KESELAMATAN SEMUA UMAT :V
@@ -73,16 +73,16 @@ Jangan lupa update database!!!
 
 ### Bug dan Kekurangan Yang Masih Menghantui
 
-#### Pada customer kurang view untuk daftar booking yang dilakukan customer
+#### -Pada customer kurang view untuk daftar booking yang dilakukan customer
 
-#### Pada admin, CRUD Items masih belum sempurna
+#### -Pada admin, CRUD Items masih belum sempurna
 
 - Create Items bisa dilakukan, namun routing masih default (namaController/method) (padahal sudah dibuatkan route baru), namun pada saat menggunakan route yang dibuat, asset pada tampilan tidak muncul. Route baru = Admin/items/add
 - Update Items bisa dilakukan, namun menggunakan routing default maupun yang sudah dibuat, asset dari tampilan tetap tidak muncul. Route baru = Admin/items/edit
 - Read Items (detail) belum dibuat karena permasalahan pada routing juga, route default maupun buatan asset tampilan tetap tidak muncul
 
-#### Apakah mau nambah fitur CRUD admin??
+#### -Apakah mau nambah fitur CRUD admin??
 
-#### Fitur untuk CRUD gambar tambahan setiap item masih belum dibuat
+#### -Fitur untuk CRUD gambar tambahan setiap item masih belum dibuat
 
 - Termasuk view untuk menampilkan banyak gambar untuk satu item juga belum ada
