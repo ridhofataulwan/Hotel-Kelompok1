@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\BookingModel;
 use App\Models\CustomerModel;
 use App\Models\ItemsModel;
+use App\Models\AdminModel;
 
 class Booking extends BaseController
 {
@@ -14,34 +15,24 @@ class Booking extends BaseController
         $this->customerModel = new CustomerModel();
         $this->bookingModel = new BookingModel();
         $this->itemsModel = new ItemsModel();
+        $this->adminModel = new AdminModel();
     }
 
     public function index()
     {
-        // $data = [
-        //     'book' => $this->bookingModel->getBooking()
-        // ];
-        $data = [
-            'items' => $this->itemsModel->getItems(),
-            'title' => 'Item List'
-        ];
-        return view('pages/book/rooms', $data);
-    }
-
-    public function details($items_id)
-    {
-        $data = [
-            'items' => $this->itemsModel->getItems($items_id)
-        ];
-        return view('pages/book/details', $data);
-    }
-
-    public function listBook()
-    {
-        // $data = [
-        //     'bookCustomer' => $this->bookingModel->getBookingCustomer($this->customerModel->getCustomerIdByUser(user_id()))
-        // ];
-        return view('pages/book/details');
+        if (in_groups('admin')) {
+            $data = [
+                'admin' => $this->adminModel->getAdminByUser(user_id()),
+                'booking' => $this->bookingModel->getBooking(),
+            ];
+            return view('Admin/booking/admin', $data);
+        } else if (in_groups('customer')) {
+            $customer_id = $this->customerModel->getCustomerIdByUser(user_id())['customer_id'];
+            $data = [
+                'booking' => $this->bookingModel->getBookingCustomer($customer_id),
+            ];
+            return view('pages/book/customerbook', $data);
+        }
     }
 
     public function create($item_id)
@@ -66,7 +57,49 @@ class Booking extends BaseController
         echo '
                 <script>
                     alert("Booking Berhasil Dibuat!");
-                    window.location="' . base_url('Items/') . '";
+                    window.location="' . base_url('Mybook') . '";
+                </script>
+            ';
+    }
+
+    public function pending($booking_id)
+    {
+        $data = [
+            'booking_status' => 'pending'
+        ];
+        $this->bookingModel->updateBook($booking_id, $data);
+        echo '
+                <script>
+                    alert("Booking Status:PENDING Berhasil!");
+                    window.location="' . base_url('Admin/booking') . '";
+                </script>
+            ';
+    }
+
+    public function ongoing($booking_id)
+    {
+        $data = [
+            'booking_status' => 'ongoing'
+        ];
+        $this->bookingModel->updateBook($booking_id, $data);
+        echo '
+                <script>
+                    alert("Booking Status:ONGOING Berhasil!");
+                    window.location="' . base_url('Admin/booking') . '";
+                </script>
+            ';
+    }
+
+    public function done($booking_id)
+    {
+        $data = [
+            'booking_status' => 'done'
+        ];
+        $this->bookingModel->updateBook($booking_id, $data);
+        echo '
+                <script>
+                    alert("Booking Status:DONE Berhasil!");
+                    window.location="' . base_url('Admin/booking') . '";
                 </script>
             ';
     }
