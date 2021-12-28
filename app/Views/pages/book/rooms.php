@@ -71,7 +71,7 @@
                 foreach ($items as $items) : ?>
                     <div class="col-lg-4 col-md-6">
                         <div class="room-item">
-                            <img src="<?= $items['items_image'] ?>" alt="">
+                            <img src="<?= $items['items_thumbnail'] ?>" alt="">
                             <div class="ri-text">
                                 <h4><?= $items['items_name'] ?></h4>
                                 <h3><?= rupiah($items['items_price']) ?><span>/Pernight</span></h3>
@@ -87,7 +87,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <a href="<?= base_url() . '/Booking/details/' . $items['items_id'] ?>" class="primary-btn">More Details</a>
+                                <a href="<?= base_url('Items/detail') . '/' . $items['items_id'] ?>" class="primary-btn">More Details</a>
                             </div>
                         </div>
                     </div>
