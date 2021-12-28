@@ -171,10 +171,12 @@ class AuthController extends Controller
 
 		$this->config->requireActivation === null ? $user->activate() : $user->generateActivateHash();
 
-		// Ensure default group gets assigned if set
-		if (!empty($this->config->defaultUserGroup)) {
-			$users = $users->withGroup($this->config->defaultUserGroup);
+
+		// Semua yang register akan menjadi customer
+		if (!empty($this->config->customerGroup)) {
+			$users = $users->withGroup($this->config->customerGroup);
 		}
+		
 
 		if (!$users->save($user)) {
 			return redirect()->back()->withInput()->with('errors', $users->errors());

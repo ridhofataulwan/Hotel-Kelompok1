@@ -62,7 +62,7 @@ class Filters extends BaseConfig
      *
      * @var array
      */
-    public $filters = [
-        'login' => ['before' => ['Admin/', 'Booking/', 'Cutomer/', 'Items']] #nanti set jadi semua controller kecuali buat guest
-    ];
+    // public $filters = [
+    //     'login' => ['before' => ['']]
+    // ];
 }

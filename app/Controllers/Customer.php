@@ -2,7 +2,6 @@
 
 namespace App\Controllers;
 
-use App\Models\AdminModel;
 use App\Models\CustomerModel;
 
 class Customer extends BaseController
@@ -11,36 +10,30 @@ class Customer extends BaseController
     {
         helper(['form', 'url', 'auth']);
         $this->customerModel = new CustomerModel();
-        $this->adminModel = new AdminModel();
+        // $this->builder = $this->db->table('users');
+
     }
 
     public function index()
     {
-        if (in_groups('admin')) {
-            $data = [
-                'admin' => $this->adminModel->getAdminByUser(user_id()),
-                'customer' => $this->customerModel->getCustomerAll(),
-            ];
-            return view('Admin/customer/admin', $data);
-        } else if (in_groups('customer')) {
-            $data = [
-                'customer' => $this->customerModel->getCustomerByUser(user_id())[0],
-            ];
-            return view('User/profile', $data);
-        }
+        $data = [
+            'customer' => $this->customerModel->getCustomerByUser(user_id()),
+            'user'
+        ];
+        return view('User/profile', $data);
     }
 
-    public function update()
+    public function update($id_customer)
     {
         $data = [
-            'customer' => $this->customerModel->getCustomerByUser(user_id())[0]
+            'customer' => $this->customerModel->getCustomerById($id_customer)
         ];
         // $query = $this->builder->get();
         // $data['users'] = $query->getResult();
         return view('User/editProfile', $data);
     }
 
-    public function updateCustomer()
+    public function updateCustomer($id_customer)
     {
         //Bagian getPost() isinya bisa diganti sesuai yang ada di view
         //Kalo ga, yang di view name dari inputnya yang ngikutin yang disini
@@ -53,13 +46,9 @@ class Customer extends BaseController
             'customer_telp' => $this->request->getVar('telp_customer'),
             'customer_address' => $this->request->getVar('alamat_customer'),
         ];
-        $id_customer = $this->customerModel->getCustomerIdByUser(user_id())['customer_id'];
+
         $this->customerModel->updateCustomerProfile($id_customer, $data);
         session()->setFlashData('pesan', 'Data has been saved successfully!');
-        echo '
-        <script>
-            window.location="' . base_url('Profile') . '"
-        </script>
-        ';
+        return redirect()->to('customer');
     }
 }

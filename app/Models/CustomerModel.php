@@ -9,13 +9,9 @@ class CustomerModel extends Model
     protected $table = 'customer';
     protected $primaryKey = 'customer_id';
 
-    public function getCustomerAll()
-    {
-        return $this->db->table('customer')->join('users', 'customer.user_id = users.id')->get()->getResultArray();
-    }
     public function getCustomerByUser($id)
     {
-        return $this->db->table('customer')->where(['user_id' => $id])->get()->getResultArray();
+        return $this->db->table('customer')->where(['user_id' => $id])->get()->getResultArray()[0];
     }
 
     public function getCustomerById($customer_id)

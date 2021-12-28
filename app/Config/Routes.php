@@ -17,7 +17,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
+$routes->setDefaultController('Items');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -31,47 +31,8 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->group('/', function ($routes) {
-    $routes->get('', 'Home::index');
-    $routes->get('Profile', 'Customer::index');
-    $routes->get('Profile/update', 'Customer::update');
-    $routes->add('Profile/updating', 'Customer::updateCustomer');
-    $routes->get('Items', 'Items::index');
-    $routes->get('Items/detail/(:num)', 'Items::details/$1');
-    $routes->get('Mybook', 'Booking::index');
-    $routes->add('Items/book/(:num)', 'Booking::create/$1');
-});
-$routes->group('Admin', function ($routes) {
-    // Dashboard
-    $routes->get('', 'Home::index');
-
-    // Customer
-    $routes->get('customer', 'Customer::index');
-
-    // Admin
-    $routes->get('list', 'Admin::index');
-
-    // Items
-    $routes->get('items', 'Items::index');
-    $routes->get('items/detail/(:num)', 'Items::details/$1');
-    $routes->get('items/add', 'Items::addItemPage');
-    $routes->add('items/adding', 'Items::addItem');
-    $routes->get('items/edit/(:num)', 'Items::updateItemPage/$1');
-    $routes->add('items/editing', 'Items::updateItem');
-    $routes->get('items/delete/(:num)', 'Items::delete/$1');
-
-    // Hotel Image
-    $routes->get('image/(:num)', 'Admin::image/$1');
-    $routes->get('image/add/(:num)', 'Image::add/$1');
-    $routes->add('image/addProcess', 'Image::addProcess');
-    $routes->get('image/delete/(:num)', 'Image::deleteData/$1');
-
-    // Booking
-    $routes->get('booking', 'Booking::index');
-    $routes->add('booking/pending/(:num)', 'Booking::pending/$1');
-    $routes->add('booking/ongoing/(:num)', 'Booking::ongoing/$1');
-    $routes->add('booking/done/(:num)', 'Booking::done/$1');
-});
+$routes->get('/', 'Items::index');
+$routes->delete('/items/(:num)', 'Items::deleteItem/$1', ['filter' => 'role:admin']);
 /*
  * --------------------------------------------------------------------
  * Additional Routing
