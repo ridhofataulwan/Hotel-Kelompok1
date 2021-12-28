@@ -19,6 +19,7 @@
                 </a>
                 <div class="navbar-search-block">
                     <form class="form-inline">
+                        <?= csrf_field(); ?>
                         <div class="input-group input-group-sm">
                             <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
                             <div class="input-group-append">
@@ -50,11 +51,11 @@
                     </div>
 
                     <div class="mb-3">
-                    <label class="form-label block">Tipe</label>
-                    <select class="form-select" name="tipe_item">
-                        <option value="hotel">Hotel</option>
-                        <option value="villa">Villa</option>
-                    </select>
+                        <label class="form-label block">Tipe</label>
+                        <select class="form-select" name="tipe_item">
+                            <option value="hotel">Hotel</option>
+                            <option value="villa">Villa</option>
+                        </select>
                     </div>
 
                     <div class="mb-3">
