@@ -20,8 +20,6 @@ class Items extends BaseController
 
     public function index()
     {
-<<<<<<< Updated upstream
-=======
         if (in_groups('admin')) {
             if (session('OTPVerified')) {
                 $data = [
@@ -125,7 +123,6 @@ class Items extends BaseController
 
     public function listItems()
     {
->>>>>>> Stashed changes
         if (in_groups('admin')) {
             $data = [
                 'admin' => $this->adminModel->getAdminByUser(user_id()),

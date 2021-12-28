@@ -13,11 +13,7 @@ class ItemsModel extends Model
         if ($items_id == '') {
             return $this->db->table('items')->get()->getResultArray();
         } else {
-<<<<<<< Updated upstream
-            return $this->db->table('items')->where(['items.items_id' => $items_id])->get()->getResultArray()[0];
-=======
             return $this->db->table('items')->where(['items_id' => $items_id])->get()->getResultArray()[0];
->>>>>>> Stashed changes
         }
     }
 

@@ -42,47 +42,6 @@
                 <a class="navbar-brand" href="javascript:void(0)">
                     <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
                 </a>
-<<<<<<< Updated upstream
-            </div>
-            <div class="navbar-inner">
-                <!-- Collapse -->
-                <div class="collapse navbar-collapse" id="sidenav-collapse-main">
-                    <!-- Nav items -->
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="<?= base_url('') ?>">
-                                <i class="ni ni-tv-2 text-primary"></i>
-                                <span class="nav-link-text">Dashboard</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url('Admin/list') ?>">
-                                <i class="ni ni-single-02 text-yellow"></i>
-                                <span class="nav-link-text">Admin</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url('Admin/items') ?>">
-                                <i class="ni ni-istanbul text-default"></i>
-                                <span class="nav-link-text">Items</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url('Admin/booking') ?>">
-                                <i class="ni ni-collection text-blue"></i>
-                                <span class="nav-link-text">Booking</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url('Admin/customer') ?>">
-                                <i class="ni ni-circle-08 text-pink"></i>
-                                <span class="nav-link-text">Customer</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- Divider -->
-                    <hr class="my-3">
-=======
                 <div class="navbar-search-block">
                     <form class="form-inline">
                         <div class="input-group input-group-sm">
@@ -97,7 +56,6 @@
                             </div>
                         </div>
                     </form>
->>>>>>> Stashed changes
                 </div>
             </div>
         </div>

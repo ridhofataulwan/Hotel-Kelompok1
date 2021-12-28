@@ -84,12 +84,8 @@
                         </span>
                         <span class="tracking-wide">About</span>
                     </div>
-<<<<<<< Updated upstream
-                    <form action="<?= base_url('/Profile/updating'); ?>">
-                        <?= csrf_field(); ?>
-=======
                     <form action="<?= base_url(); ?>/customer/updateCustomer/<?= $customer['customer_id']; ?>">
->>>>>>> Stashed changes
+                        <?= csrf_field(); ?>
                         <div class="text-gray-700">
                             <div class="grid md:grid-cols-2 text-sm">
                                 <div class="grid grid-cols-2">
