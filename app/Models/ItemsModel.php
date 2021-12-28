@@ -8,13 +8,16 @@ class ItemsModel extends Model
 {
     protected $table = 'items';
     protected $primaryKey = 'items_id';
-    protected $allowedFields = ['items_id', 'items_name', 'items_type', 'items_city', 'items_address', 'items_price', 'items_desc', 'items_facility'];
     public function getItems($items_id = '')
     {
         if ($items_id == '') {
             return $this->db->table('items')->get()->getResultArray();
         } else {
+<<<<<<< Updated upstream
             return $this->db->table('items')->where(['items.items_id' => $items_id])->get()->getResultArray()[0];
+=======
+            return $this->db->table('items')->where(['items_id' => $items_id])->get()->getResultArray()[0];
+>>>>>>> Stashed changes
         }
     }
 

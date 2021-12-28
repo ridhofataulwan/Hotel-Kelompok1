@@ -20,6 +20,112 @@ class Items extends BaseController
 
     public function index()
     {
+<<<<<<< Updated upstream
+=======
+        if (in_groups('admin')) {
+            if (session('OTPVerified')) {
+                $data = [
+                    'title' =>  'Dashboard',
+                ];
+
+                return view('Admin/index', $data);
+            }
+            echo '
+                <script>
+                    window.location="' . base_url('Items/otp') . '";
+                </script>
+            ';
+        } else if (in_groups('customer')) {
+            if (session('OTPVerified')) {
+                $data2 = [
+                    'title' => 'Homepage',
+                    'items' => $this->itemsModel->getItems()
+                ];
+                return view('pages/index', $data2);
+            }
+            echo '
+                <script>
+                    window.location="' . base_url('Items/otp') . '";
+                </script>
+            ';
+        } else {
+            $data2 = [
+                'title' => 'Homepage',
+                'items' => $this->itemsModel->getItems()
+            ];
+            return view('pages/index', $data2);
+        }
+    }
+
+    public function otp()
+    {
+        // Membuat nilai OTP dan Session untuk OTP
+        $OTP = rand(1000, 9000);
+        session()->set('OTP', $OTP);
+        // Mengambil Nilai Email
+        $email_user = user()->email;
+        // Mengaktifkan Service Email
+        $email = \Config\Services::email();
+        $email->setFrom('inibudisetyawan@gmail.com', 'Admin Ecoland');
+        $email->setTo($email_user);
+        $email->setSubject('Kode OTP - Verifikasi Login Ecoland');
+        $email->setMessage($OTP);
+        // Mengirim e-mail
+        if ($email->send()) {
+            session()->set('OTPVerified', True);
+            echo '
+                <script>
+                    alert("Kode OTP sudah dikirimkan, silahkan cek email Anda");
+                </script>
+            ';
+            return view('auth/otp');
+        } else {
+            echo '
+                <script>
+                    alert("Gagal Terkirim");
+                    window.location="' . base_url('/logout') . '";
+                </script>
+            ';
+        }
+    }
+
+    public function otpVer()
+    {
+        //Verifikasi dari kode OTP yang sudah di kirimkan
+        $otp = session('OTP');
+        $user_input = $this->request->getPost('kode');
+        if ($otp == $user_input) {
+            if (in_groups('admin')) {
+                $data = [
+                    'title' =>  'Dashboard',
+                ];
+
+                return view('Admin/index', $data);
+            }
+            //customer
+            if (empty($this->customerModel->getCustomerByUser(user_id()))) {
+                //Ini buat bikin profile customer klo baru create(isi = default)
+                $this->customerModel->createCustomerProfile(user_id());
+            }
+
+            $data2 = [
+                'title' => 'Homepage',
+                'items' => $this->itemsModel->getItems()
+            ];
+            return view('pages/index', $data2);
+        } else {
+            echo '
+                <script>
+                    alert("OTP Salah, silahkan login ulang");
+                    window.location="' . base_url('/logout') . '";
+                </script>
+            ';
+        }
+    }
+
+    public function listItems()
+    {
+>>>>>>> Stashed changes
         if (in_groups('admin')) {
             $data = [
                 'admin' => $this->adminModel->getAdminByUser(user_id()),

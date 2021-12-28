@@ -42,6 +42,7 @@
                 <a class="navbar-brand" href="javascript:void(0)">
                     <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
                 </a>
+<<<<<<< Updated upstream
             </div>
             <div class="navbar-inner">
                 <!-- Collapse -->
@@ -81,6 +82,22 @@
                     </ul>
                     <!-- Divider -->
                     <hr class="my-3">
+=======
+                <div class="navbar-search-block">
+                    <form class="form-inline">
+                        <div class="input-group input-group-sm">
+                            <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                            <div class="input-group-append">
+                                <button class="btn btn-navbar" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+>>>>>>> Stashed changes
                 </div>
             </div>
         </div>

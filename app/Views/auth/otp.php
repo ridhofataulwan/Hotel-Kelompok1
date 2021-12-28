@@ -12,10 +12,10 @@
                 <div class="login-wrap p-0">
                     <h3 class="mb-4 text-center text-xl">Periksa email Anda</h3>
                     <h3 class="mb-4 text-center text-xl"><?= user()->email; ?></h3>
-                    <h3 class="mb-4 text-center text-xl"><?= $_SESSION['otp']; ?></h3>
-                    <form action="/items/landing">
+                    <h3 class="mb-4 text-center text-xl"><?= session('OTP') ?></h3>
+                    <form action="<?= base_url('Items/otpVer') ?>" method="post">
                         <div class="form-group">
-                            <input id="otp" type="number" name="otp" class="form-control" placeholder="Masukan OTP Anda" required>
+                            <input id="otp" type="number" name="kode" class="form-control" placeholder="Masukan OTP Anda" required>
                             <span toggle="#otp" class="fa fa-fw fa-eye field-icon toggle-otp"></span>
                         </div>
                         <div class="form-group">
